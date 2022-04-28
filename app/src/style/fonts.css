@@ -1,8 +1,6 @@
-/* @font-face {
-	font-family: '...';
-	src: url('/fonts/...');
-	font-weight: normal;
+@font-face {
+	font-family: 'Inter Light BETA';
 	font-style: normal;
-} */
-
-@import url('https://fonts.googleapis.com/css2?family=Sree+Krushnadevaraya&display=swap');
+	font-weight: normal;
+	src: local('Inter Light BETA'), url('./font/Inter-Light-BETA.woff') format('woff');
+}

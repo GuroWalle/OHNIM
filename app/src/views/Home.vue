@@ -1,7 +1,14 @@
 <template>
   <div class="main-page">
     <div class="main-page__logo">MINO / OHNIM</div>
-    <div class="main-page__background"></div>
+    <div class="main-page__background">
+      <div class="main-page__menu">
+        <RouterLink to="/works">Works</RouterLink> <br />
+        <RouterLink to="/biography">Biography</RouterLink> <br />
+        <RouterLink to="/exhibitions">Exhibitions</RouterLink> <br />
+        <RouterLink to="/contact">Contact</RouterLink>
+      </div>
+    </div>
     <!-- <img src="/assets/images/background_desktop.jpg" alt="" /> -->
   </div>
 </template>
@@ -24,9 +31,14 @@ export default {
 }
 
 .main-page__background {
-  background: black;
+  background: grey;
   width: 100%;
   height: 100%;
+}
+
+.main-page__menu {
+  color: white;
+  font-size: 25px;
 }
 
 /*   mobile   */
