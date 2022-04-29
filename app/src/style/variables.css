@@ -1,6 +1,29 @@
 :root {
 	--background: white;
 	--foreground: black;
+	--white-transparent: rgba(255, 255, 255, 0.600);
 
+	/*  Sizing  */
+	--sizing-small: 1.281rem;
+	--sizing-medium: 2.563rem;
+	--sizing-big: 5.125rem;
+	--sizing-mega: 10.25rem;
+
+
+	/*    FONT    */
 	--font-family: 'Inter Light BETA';
+
+	/*  Desktop  */
+	--font-small-desktop: 1.563rem;
+	--font-medium-desktop: 2.188rem;
+	--font-big-desktop: 3.125rem;
+
+	/*  Mobile  */
+	--font-small-mobile: 0.938rem;
+	--font-medium-mobile: 1.563rem;
+	--font-big-mobile: 1.875rem;
+
+	/*  Letter spazing  */
+	--letter-spazing-small: 0.07rem;
+	--letter-spazing-medium: 0.6rem;
 }
