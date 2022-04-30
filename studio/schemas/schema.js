@@ -4,6 +4,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import contact from './documents/contact.js'
 import biography from './documents/biography.js'
 import exhibitions from './documents/exhibitions.js'
+import quotes from './documents/quotes.js'
 
 export default createSchema({
   name: 'default',
@@ -12,5 +13,6 @@ export default createSchema({
     exhibitions,
     biography,
     contact,
+    quotes,
   ]),
 })
