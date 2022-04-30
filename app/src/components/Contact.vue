@@ -1,9 +1,7 @@
 <template>
   <div class="contact">
     <MenuOpen />
-    <RouterLink to="/">
-      <div class="main-page__logo">MINO / OHNIM</div>
-    </RouterLink>
+    <RouterLink to="/"> </RouterLink>
   </div>
 </template>
 

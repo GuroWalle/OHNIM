@@ -10,9 +10,9 @@
     </button>
     <div v-if="x_showing" class="menu__toggle">
       <RouterLink to="/">X</RouterLink>
-      <RouterLink to="/works">Works</RouterLink> <br />
-      <RouterLink to="/biography">Biography</RouterLink> <br />
-      <RouterLink to="/exhibitions">Exhibitions</RouterLink> <br />
+      <RouterLink to="/works">Works</RouterLink>
+      <RouterLink to="/biography">Biography</RouterLink>
+      <RouterLink to="/exhibitions">Exhibitions</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </div>
   </div>
@@ -44,5 +44,12 @@ export default {
   font-size: var(--font-big-desktop);
   margin: 0 var(--sizing-medium);
   padding-left: 4.465rem;
+}
+
+@media screen and (max-width: 600px) {
+  .menu__toggle a:nth-child(1) {
+    font-size: var(--font-big-mobile);
+    margin: 0 0;
+  }
 }
 </style>

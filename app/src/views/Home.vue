@@ -1,10 +1,17 @@
 <template>
   <div class="main-page">
-    <div class="main-page__logo">MINO / OHNIM</div>
     <div class="main-page__background">
       <MenuClosed />
     </div>
-    <!-- <img src="/assets/images/background_desktop.jpg" alt="" /> -->
+    <div class="main-page">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, possimus
+      provident, eaque modi quam quidem harum earum ullam necessitatibus porro
+      quis dolores temporibus perspiciatis repellat repellendus voluptatibus sed
+      deserunt illum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Neque fuga praesentium sapiente adipisci consequatur a, modi est assumenda
+      non, nulla vero ex maxime suscipit et necessitatibus deleniti temporibus
+      eum possimus!
+    </div>
   </div>
 </template>
 
@@ -14,7 +21,6 @@ export default {
   data() {
     return {};
   },
-
   components: {
     MenuClosed,
   },
@@ -22,29 +28,17 @@ export default {
 </script>
 
 <style>
-.main-page__logo {
-  position: absolute;
-  top: var(--sizing-big);
-  right: var(--sizing-big);
-  color: red;
-  font-size: var(--font-big-desktop);
-  letter-spacing: var(--letter-spazing-medium);
+.main-page {
+  background-image: url("/assets/images/background_ny.jpg");
 }
 
 .main-page__background {
-  background: grey;
+  background-image: url("/assets/images/background_ny.jpg");
   width: 100%;
   height: 100%;
 }
 
 /*   mobile   */
 @media screen and (max-width: 600px) {
-  .main-page__logo {
-    right: var(--sizing-medium);
-    top: var(--sizing-medium);
-    color: blue;
-    font-size: var(--font-big-mobile);
-    width: 9.9rem;
-  }
 }
 </style>

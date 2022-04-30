@@ -1,9 +1,7 @@
 <template>
   <div class="biography">
     <MenuOpen />
-    <RouterLink to="/">
-      <div class="main-page__logo">MINO / OHNIM</div>
-    </RouterLink>
+    <RouterLink to="/"> </RouterLink>
 
     <div class="biography__text">
       <h1 class="biography__text--header">Biography</h1>

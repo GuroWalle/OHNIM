@@ -10,9 +10,9 @@
     </button>
     <div v-if="x_showing" class="menu__toggle">
       <button class="toggle_x" @click="closeMenu">X</button>
-      <RouterLink to="/works">Works</RouterLink> <br />
-      <RouterLink to="/biography">Biography</RouterLink> <br />
-      <RouterLink to="/exhibitions">Exhibitions</RouterLink> <br />
+      <RouterLink to="/works">Works</RouterLink>
+      <RouterLink to="/biography">Biography</RouterLink>
+      <RouterLink to="/exhibitions">Exhibitions</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </div>
   </div>
@@ -80,24 +80,23 @@ export default {
 /*   mobile   */
 @media screen and (max-width: 600px) {
   .menu {
-    position: relative;
     width: 9.875rem;
     height: 43.78rem;
   }
 
   .menu__hamburger {
     width: 2rem;
-    margin: var(--sizing-medium) var(--sizing-medium);
+    margin: 3rem 4rem;
   }
 
   .menu__toggle {
-    position: relative;
     width: 9.875rem;
     height: 43.78rem;
   }
 
   .toggle_x {
-    margin: var(--sizing-medium) var(--sizing-medium);
+    margin: 0 4rem;
+    font-size: var(--font-big-mobile);
   }
 
   .menu__toggle a {
