@@ -8,8 +8,8 @@
         alt=""
       />
     </button>
-    <div v-if="x_showing" class="menu__links">
-      <button class="menu__links--x" @click="closeMenu" to="/">X</button>
+    <div v-if="x_showing" class="menu__toggle">
+      <button class="toggle_x" @click="closeMenu">X</button>
       <RouterLink to="/works">Works</RouterLink> <br />
       <RouterLink to="/biography">Biography</RouterLink> <br />
       <RouterLink to="/exhibitions">Exhibitions</RouterLink> <br />
@@ -44,41 +44,37 @@ export default {
   position: relative;
   width: 15.938rem;
   height: 49.3rem;
-  background: var(--white-transparent);
-  left: 0;
-  top: 0;
 }
 
 .menu__hamburger {
-  position: absolute;
-  width: 3.5rem;
-  top: 3.8rem;
-  left: 6.75rem;
+  width: 3rem;
+  margin: 3.15rem 6.5rem;
 }
 
-.menu__links--x {
-  display: flex;
-  justify-content: center;
-  padding: var(--sizing-medium);
-  font-size: var(--font-big-desktop);
-  color: black;
-  text-decoration: none;
-}
-
-.menu__links a {
+.menu__toggle {
   display: flex;
   flex-direction: column;
-  margin-left: var(--sizing-small);
-  padding: var(--sizing-small);
+  position: relative;
+  width: 15.938rem;
+  height: 49.3rem;
+  background: var(--white-transparent);
+  padding-top: var(--sizing-medium);
+}
 
+.toggle_x {
+  font-size: var(--font-big-desktop);
+}
+
+.menu__toggle a {
   font-size: var(--font-small-desktop);
+  margin: var(--sizing-medium);
   color: black;
   letter-spacing: var(--letter-spazing-small);
   text-decoration: none;
 }
 
-.menu__links a:hover {
-  margin-left: var(--sizing-medium);
+.menu__toggle a:nth-child(n + 2):hover {
+  margin-left: var(--sizing-big);
 }
 
 /*   mobile   */
@@ -86,17 +82,25 @@ export default {
   .menu {
     position: relative;
     width: 9.875rem;
-    height: 49.3rem;
-    background: pink;
-    left: 0;
-    top: 0;
+    height: 43.78rem;
   }
 
-  .menu__links--x {
-    font-size: var(--font-big-mobile);
+  .menu__hamburger {
+    width: 2rem;
+    margin: var(--sizing-medium) var(--sizing-medium);
   }
 
-  .menu__links a:nth-child(n + 2) {
+  .menu__toggle {
+    position: relative;
+    width: 9.875rem;
+    height: 43.78rem;
+  }
+
+  .toggle_x {
+    margin: var(--sizing-medium) var(--sizing-medium);
+  }
+
+  .menu__toggle a {
     font-size: var(--font-small-mobile);
   }
 }

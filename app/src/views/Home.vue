@@ -2,21 +2,21 @@
   <div class="main-page">
     <div class="main-page__logo">MINO / OHNIM</div>
     <div class="main-page__background">
-      <Menu />
+      <MenuClosed />
     </div>
     <!-- <img src="/assets/images/background_desktop.jpg" alt="" /> -->
   </div>
 </template>
 
 <script>
-import Menu from "../components/Menu.vue";
+import MenuClosed from "../components/MenuClosed.vue";
 export default {
   data() {
     return {};
   },
 
   components: {
-    Menu,
+    MenuClosed,
   },
 };
 </script>
@@ -24,8 +24,8 @@ export default {
 <style>
 .main-page__logo {
   position: absolute;
-  top: 3.8rem;
-  right: 6.75rem;
+  top: var(--sizing-big);
+  right: var(--sizing-big);
   color: red;
   font-size: var(--font-big-desktop);
   letter-spacing: var(--letter-spazing-medium);
@@ -40,7 +40,8 @@ export default {
 /*   mobile   */
 @media screen and (max-width: 600px) {
   .main-page__logo {
-    right: 2.563rem;
+    right: var(--sizing-medium);
+    top: var(--sizing-medium);
     color: blue;
     font-size: var(--font-big-mobile);
     width: 9.9rem;
