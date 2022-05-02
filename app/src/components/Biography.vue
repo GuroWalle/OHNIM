@@ -1,37 +1,34 @@
 <template>
   <div class="biography">
     <MenuOpen />
-    <RouterLink to="/"> </RouterLink>
+    <div v-if="loading">loading...</div>
+    <div v-else>
+      <div class="biography__background" v-for="biography in result">
+        <h1 class="biography__header">{{ biography.title }}</h1>
 
-    <div class="biography__text">
-      <h1 class="biography__text--header">Biography</h1>
-      <div class="biography__text--description">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-          consectetur neque, architecto tenetur eum mollitia illum ab vel
-          nostrum amet voluptatum libero odio tempore iusto voluptates? Itaque
-          quasi necessitatibus quas!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-          consectetur neque, architecto tenetur eum mollitia illum ab vel
-          nostrum amet voluptatum libero odio tempore iusto voluptates? Itaque
-          quasi necessitatibus quas!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-          consectetur neque, architecto tenetur eum mollitia illum ab vel
-          nostrum amet voluptatum libero odio tempore iusto voluptates? Itaque
-          quasi necessitatibus quas!
-        </p>
+        <div class="biography__description">
+          {{ biography.description }}
+        </div>
+        <img class="biography__image" :src="biography.image.asset.url" alt="" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import query from "../groq/biography.groq?raw";
+import viewMixin from "../mixins/viewMixins.js";
 import MenuOpen from "../components/MenuOpen.vue";
+
 export default {
+  mixins: [viewMixin],
+
+  async created() {
+    await this.sanityFetch(query, {
+      documentType: "project",
+    });
+  },
+
   data() {
     return {};
   },
@@ -47,18 +44,30 @@ export default {
   background: grey;
 }
 
-.biography__text {
+.biography__background {
   position: absolute;
   top: var(--sizing-mega);
   left: 20rem;
-  width: 70%;
+  max-width: 70%;
+  max-height: 35rem;
+
+  overflow: scroll;
 }
 
-.biography__text--header {
+.biography__header {
   margin: 0 0 var(--sizing-small) 0;
+  font-size: var(--font-medium-desktop);
+  letter-spacing: var(--letter-spazing-medium);
 }
 
-.biography__text--description {
+.biography__description {
   margin: 0 var(--sizing-small);
+  font-size: var(--font-medium-desktop);
+  letter-spacing: var(--letter-spazing-small);
+}
+
+.biography__image {
+  max-width: 20rem;
+  max-height: 30rem;
 }
 </style>

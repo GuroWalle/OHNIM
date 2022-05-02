@@ -1,0 +1,8 @@
+*[_type == 'biography'] {
+  _id,
+  title,
+  description,
+  image {
+     asset->{url}
+   },
+}

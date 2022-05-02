@@ -16,8 +16,14 @@ export default {
          validation: Rule => Rule.required(),
       },
       {
-         title: 'email',
+         title: 'Email',
          name: 'email',
+         type: 'string',
+         validation: Rule => Rule.required(),
+      },
+      {
+         title: 'Address',
+         name: 'address',
          type: 'string',
          validation: Rule => Rule.required(),
       },

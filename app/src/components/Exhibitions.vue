@@ -1,13 +1,34 @@
 <template>
   <div class="exhibitions">
     <MenuOpen />
-    <RouterLink to="/"> </RouterLink>
+    <div v-if="loading">loading...</div>
+    <div v-else>
+      <div class="exhibitions__background" v-for="exhibitions in result">
+        <h1>exhibitions</h1>
+        <div>
+          <div class="exhibitions__title">{{ exhibitions.title }}</div>
+          <div class="exhibitions__description">
+            {{ exhibitions.description }}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import query from "../groq/exhibitions.groq?raw";
+import viewMixin from "../mixins/viewMixins";
 import MenuOpen from "../components/MenuOpen.vue";
+
 export default {
+  mixins: [viewMixin],
+
+  async created() {
+    await this.sanityFetch(query, {
+      documentType: "project",
+    });
+  },
   data() {
     return {};
   },
@@ -21,5 +42,21 @@ export default {
 <style>
 .exhibitions {
   background: grey;
+}
+
+.exhibitions__background {
+  position: absolute;
+  top: var(--sizing-mega);
+  left: 20rem;
+  max-width: 70%;
+  max-height: 35rem;
+}
+
+.exhibitions__title {
+  background: pink;
+}
+
+.exhibitions__description {
+  background: paleturquoise;
 }
 </style>
