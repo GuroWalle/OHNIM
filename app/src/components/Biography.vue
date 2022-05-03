@@ -47,7 +47,7 @@ export default {
 .biography__background {
   position: absolute;
   top: var(--sizing-mega);
-  left: 20rem;
+  left: var(--sizing-huge);
   max-width: 70%;
   max-height: 35rem;
 
@@ -69,5 +69,29 @@ export default {
 .biography__image {
   max-width: 20rem;
   max-height: 30rem;
+}
+
+@media screen and (max-width: 600px) {
+  .biography__background {
+    top: var(--sizing-bigger);
+    left: var(--sizing-mega);
+  }
+
+  .biography__header {
+    margin: var(--sizing-small);
+    font-size: var(--font-medium-mobile);
+    letter-spacing: var(--letter-spazing-small);
+  }
+
+  .biography__description {
+    margin: var(--sizing-small) 0;
+    font-size: var(--font-small-mobile);
+    letter-spacing: var(--letter-spazing-small);
+  }
+
+  .biography__image {
+    max-width: 14.4rem;
+    max-height: 35rem;
+  }
 }
 </style>

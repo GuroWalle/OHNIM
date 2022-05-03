@@ -63,11 +63,31 @@ export default {
 .contact__title {
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
-  margin: var(--sizing-small) 0 var(--sizing-medium) 0;
+  margin: var(--sizing-small) 0;
 }
 
 .contact__text {
   font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
+  margin: var(--sizing-big) 0;
+}
+
+@media screen and (max-width: 600px) {
+  .contact__background {
+    top: var(--sizing-mega);
+    left: 9.9rem;
+  }
+
+  .contact__title {
+    font-size: var(--font-medium-mobile);
+    letter-spacing: var(--letter-spazing-small);
+    margin: var(--sizing-small) 0;
+  }
+
+  .contact__text {
+    font-size: var(--font-small-mobile);
+    letter-spacing: var(--letter-spazing-small);
+    margin: 0 0 var(--sizing-big) 0;
+  }
 }
 </style>

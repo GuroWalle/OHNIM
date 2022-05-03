@@ -43,7 +43,7 @@ export default {
 .menu__toggle a:nth-child(1) {
   font-size: var(--font-big-desktop);
   margin: 0 var(--sizing-medium);
-  padding-left: 4.465rem;
+  padding-left: 4rem;
 }
 
 @media screen and (max-width: 600px) {

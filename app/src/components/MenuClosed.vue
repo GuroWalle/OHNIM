@@ -80,17 +80,17 @@ export default {
 /*   mobile   */
 @media screen and (max-width: 600px) {
   .menu {
-    width: 9.875rem;
+    width: 9rem;
     height: 43.78rem;
   }
 
   .menu__hamburger {
     width: 2rem;
-    margin: 3rem 4rem;
+    margin: 3rem 3.5rem;
   }
 
   .menu__toggle {
-    width: 9.875rem;
+    width: 9rem;
     height: 43.78rem;
   }
 
@@ -101,6 +101,7 @@ export default {
 
   .menu__toggle a {
     font-size: var(--font-small-mobile);
+    margin: var(--sizing-medium) var(--sizing-small);
   }
 }
 </style>

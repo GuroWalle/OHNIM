@@ -4,7 +4,6 @@
     <div v-if="loading">loading...</div>
     <div v-else>
       <div class="exhibitions__background" v-for="exhibitions in result">
-        <h1>exhibitions</h1>
         <div>
           <div class="exhibitions__title">{{ exhibitions.title }}</div>
           <div class="exhibitions__description">
@@ -53,10 +52,32 @@ export default {
 }
 
 .exhibitions__title {
+  font-size: var(--font-medium-desktop);
+  letter-spacing: var(--letter-spazing-small);
+  margin: 0 0 var(--sizing-small) 0;
   background: pink;
 }
 
 .exhibitions__description {
+  font-size: var(--font-small-desktop);
+  letter-spacing: var(--letter-spazing-small);
+  margin: 0 0 var(--sizing-small) 0;
   background: paleturquoise;
+}
+
+@media screen and (max-width: 600px) {
+  .exhibitions__background {
+    top: var(--sizing-mega);
+    left: var(--sizing-mega);
+  }
+
+  .exhibitions__title {
+    font-size: var(--font-medium-mobile);
+    margin: 0 0 var(--sizing-medium) 0;
+  }
+
+  .exhibitions__description {
+    font-size: var(--font-small-mobile);
+  }
 }
 </style>
