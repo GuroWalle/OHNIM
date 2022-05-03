@@ -20,6 +20,12 @@ export default {
          name: 'image',
          type: 'image',
          validation: Rule => Rule.required(),
+      },
+      {
+         title: 'Image caption',
+         name: 'caption',
+         type: 'text',
+         validation: Rule => Rule.required(),
       }
    ]
 }

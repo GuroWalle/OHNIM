@@ -55,21 +55,21 @@ export default {
 .contact__background {
   position: absolute;
   top: var(--sizing-mega);
-  left: 20rem;
-  max-width: 70%;
-  max-height: 35rem;
+  left: var(--sizing-huge);
+  max-width: 74%;
+  max-height: 35.5rem;
 }
 
 .contact__title {
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
-  margin: var(--sizing-small) 0;
+  margin: 0 0 var(--sizing-small) 0;
 }
 
 .contact__text {
   font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
-  margin: var(--sizing-big) 0;
+  margin: 0 0 var(--sizing-big) 0;
 }
 
 @media screen and (max-width: 600px) {

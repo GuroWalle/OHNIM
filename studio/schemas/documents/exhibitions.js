@@ -21,6 +21,12 @@ export default {
          type: 'image',
       },
       {
+         title: 'Image caption',
+         name: 'caption',
+         type: 'text',
+         validation: Rule => Rule.required(),
+      },
+      {
          title: 'Start date of exhibition',
          name: 'year',
          type: 'date',

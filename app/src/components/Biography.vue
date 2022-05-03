@@ -6,10 +6,16 @@
       <div class="biography__background" v-for="biography in result">
         <h1 class="biography__header">{{ biography.title }}</h1>
 
-        <div class="biography__description">
-          {{ biography.description }}
+        <div class="biography__flex">
+          <div class="biography__description">
+            {{ biography.description }}
+          </div>
+          <img
+            class="biography__image"
+            :src="biography.image.asset.url"
+            :alt="biography.caption"
+          />
         </div>
-        <img class="biography__image" :src="biography.image.asset.url" alt="" />
       </div>
     </div>
   </div>
@@ -48,9 +54,8 @@ export default {
   position: absolute;
   top: var(--sizing-mega);
   left: var(--sizing-huge);
-  max-width: 70%;
-  max-height: 35rem;
-
+  max-width: 74%;
+  max-height: 35.5rem;
   overflow: scroll;
 }
 
@@ -60,8 +65,13 @@ export default {
   letter-spacing: var(--letter-spazing-medium);
 }
 
+.biography__flex {
+  display: flex;
+  flex-direction: row;
+  gap: var(--sizing-small);
+}
+
 .biography__description {
-  margin: 0 var(--sizing-small);
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
 }
@@ -75,16 +85,19 @@ export default {
   .biography__background {
     top: var(--sizing-bigger);
     left: var(--sizing-mega);
+    max-width: 55%;
   }
 
   .biography__header {
-    margin: var(--sizing-small);
     font-size: var(--font-medium-mobile);
     letter-spacing: var(--letter-spazing-small);
   }
 
+  .biography__flex {
+    flex-direction: column;
+  }
+
   .biography__description {
-    margin: var(--sizing-small) 0;
     font-size: var(--font-small-mobile);
     letter-spacing: var(--letter-spazing-small);
   }

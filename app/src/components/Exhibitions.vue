@@ -9,6 +9,11 @@
           <div class="exhibitions__description">
             {{ exhibitions.description }}
           </div>
+          <img
+            class="exhibitions__image"
+            :src="exhibitions.image.asset.url"
+            :alt="exhibitions.caption"
+          />
         </div>
       </div>
     </div>
@@ -46,9 +51,11 @@ export default {
 .exhibitions__background {
   position: absolute;
   top: var(--sizing-mega);
-  left: 20rem;
-  max-width: 70%;
-  max-height: 35rem;
+  left: var(--sizing-huge);
+  max-width: 74%;
+  max-height: 35.5rem;
+
+  overflow: scroll;
 }
 
 .exhibitions__title {
@@ -65,10 +72,15 @@ export default {
   background: paleturquoise;
 }
 
+.exhibitions__image {
+  max-width: 20rem;
+}
+
 @media screen and (max-width: 600px) {
   .exhibitions__background {
     top: var(--sizing-mega);
     left: var(--sizing-mega);
+    max-width: 55%;
   }
 
   .exhibitions__title {
