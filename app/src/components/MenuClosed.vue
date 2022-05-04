@@ -41,9 +41,10 @@ export default {
 
 <style>
 .menu {
-  position: relative;
+  position: absolute;
   width: 15.938rem;
-  height: 49.3rem;
+  height: 100%;
+  margin-right: 10rem;
 }
 
 .menu__hamburger {

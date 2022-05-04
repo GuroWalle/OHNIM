@@ -4,6 +4,12 @@ export default {
    type: 'document',
    fields: [
       {
+         title: 'Nr. of painting',
+         name: 'paintingNumber',
+         type: 'string',
+         validation: Rule => Rule.required()
+      },
+      {
          title: 'Painting',
          name: 'painting',
          type: 'image',

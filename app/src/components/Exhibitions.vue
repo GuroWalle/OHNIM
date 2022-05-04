@@ -1,7 +1,7 @@
 <template>
   <div class="exhibitions">
     <MenuOpen />
-    <div v-if="loading">loading...</div>
+    <div v-if="loading" class="loading">loading...</div>
     <div v-else>
       <div class="exhibitions__background" v-for="exhibitions in result">
         <div>
@@ -46,15 +46,15 @@ export default {
 <style>
 .exhibitions {
   background: grey;
+  height: 100%;
 }
 
 .exhibitions__background {
-  position: absolute;
+  position: relative;
   top: var(--sizing-mega);
-  left: var(--sizing-huge);
-  max-width: 74%;
-  max-height: 35.5rem;
-
+  margin-left: 25%;
+  width: 70%;
+  height: 35.5rem;
   overflow: scroll;
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="biography">
     <MenuOpen />
-    <div v-if="loading">loading...</div>
+    <div v-if="loading" class="loading">loading...</div>
     <div v-else>
       <div class="biography__background" v-for="biography in result">
         <h1 class="biography__header">{{ biography.title }}</h1>
@@ -46,16 +46,24 @@ export default {
 </script>
 
 <style>
+.loading {
+  position: relative;
+  font-size: var(--font-medium-desktop);
+  top: var(--sizing-mega);
+  margin-left: 25%;
+}
+
 .biography {
   background: grey;
+  height: 100%;
 }
 
 .biography__background {
-  position: absolute;
+  position: relative;
   top: var(--sizing-mega);
-  left: var(--sizing-huge);
-  max-width: 74%;
-  max-height: 35.5rem;
+  margin-left: 25%;
+  width: 70%;
+  height: 35.5rem;
   overflow: scroll;
 }
 
