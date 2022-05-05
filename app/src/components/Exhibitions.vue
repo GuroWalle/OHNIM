@@ -3,17 +3,21 @@
     <MenuOpen />
     <div v-if="loading" class="loading">loading...</div>
     <div v-else>
-      <div class="exhibitions__background" v-for="exhibitions in result">
-        <div>
-          <div class="exhibitions__title">{{ exhibitions.title }}</div>
-          <div class="exhibitions__description">
-            {{ exhibitions.description }}
+      <div class="transparent__background">
+        <div class="haha">
+          <div class="exhibitions__background" v-for="exhibitions in result">
+            <div>
+              <div class="exhibitions__title">{{ exhibitions.title }}</div>
+              <div class="exhibitions__description">
+                {{ exhibitions.description }}
+              </div>
+              <img
+                class="exhibitions__image"
+                :src="exhibitions.image.asset.url"
+                :alt="exhibitions.caption"
+              />
+            </div>
           </div>
-          <img
-            class="exhibitions__image"
-            :src="exhibitions.image.asset.url"
-            :alt="exhibitions.caption"
-          />
         </div>
       </div>
     </div>
@@ -45,16 +49,21 @@ export default {
 
 <style>
 .exhibitions {
-  background: grey;
+  background-image: url("/assets/images/background_desktop.jpg");
   height: 100%;
 }
 
 .exhibitions__background {
   position: relative;
   top: var(--sizing-mega);
-  margin-left: 25%;
-  width: 70%;
   height: 35.5rem;
+  margin-left: var(--percent-small);
+  width: 75%;
+  margin-bottom: 35%;
+}
+
+.haha {
+  max-height: 100%;
   overflow: scroll;
 }
 
@@ -62,18 +71,16 @@ export default {
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
   margin: 0 0 var(--sizing-small) 0;
-  background: pink;
 }
 
 .exhibitions__description {
   font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
   margin: 0 0 var(--sizing-small) 0;
-  background: paleturquoise;
 }
 
 .exhibitions__image {
-  max-width: 20rem;
+  max-width: 30rem;
 }
 
 @media screen and (max-width: 600px) {

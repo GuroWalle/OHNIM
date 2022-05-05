@@ -3,18 +3,20 @@
     <MenuOpen />
     <div v-if="loading" class="loading">loading...</div>
     <div v-else>
-      <div class="biography__background" v-for="biography in result">
-        <h1 class="biography__header">{{ biography.title }}</h1>
+      <div class="transparent__background">
+        <div class="biography__background" v-for="biography in result">
+          <h1 class="biography__header">{{ biography.title }}</h1>
 
-        <div class="biography__flex">
-          <div class="biography__description">
-            {{ biography.description }}
+          <div class="biography__flex">
+            <div class="biography__description">
+              {{ biography.description }}
+            </div>
+            <img
+              class="biography__image"
+              :src="biography.image.asset.url"
+              :alt="biography.caption"
+            />
           </div>
-          <img
-            class="biography__image"
-            :src="biography.image.asset.url"
-            :alt="biography.caption"
-          />
         </div>
       </div>
     </div>
@@ -46,23 +48,16 @@ export default {
 </script>
 
 <style>
-.loading {
-  position: relative;
-  font-size: var(--font-medium-desktop);
-  top: var(--sizing-mega);
-  margin-left: 25%;
-}
-
 .biography {
-  background: grey;
+  background-image: url("/assets/images/background_desktop.jpg");
   height: 100%;
 }
 
 .biography__background {
   position: relative;
   top: var(--sizing-mega);
-  margin-left: 25%;
-  width: 70%;
+  margin-left: var(--percent-small);
+  width: 80%;
   height: 35.5rem;
   overflow: scroll;
 }
@@ -114,5 +109,24 @@ export default {
     max-width: 14.4rem;
     max-height: 35rem;
   }
+}
+
+/* Styles Biography.vue, Contact.vue and Exhibitions.vue */
+.loading {
+  position: relative;
+  font-size: var(--font-small-desktop);
+  margin-left: 25%;
+  margin-left: 17.7%;
+  background: var(--white-transparent);
+  width: 87, 7%;
+  height: 100%;
+  padding: var(--sizing-mega);
+}
+
+.transparent__background {
+  margin-left: 17.7%;
+  background: var(--white-transparent);
+  width: 87, 7%;
+  height: 100%;
 }
 </style>

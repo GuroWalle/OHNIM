@@ -98,7 +98,7 @@ export default {
 
 <style>
 .works {
-  background: grey;
+  background-image: url("/assets/images/background_desktop.jpg");
   height: 100%;
 }
 
@@ -107,16 +107,15 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: var(--sizing-mega);
-  margin-left: 25%;
+  margin-left: 17.7%;
   background: var(--white-transparent);
-  width: 70%;
-  height: 37rem;
+  width: 87, 7%;
+  height: 100%;
 }
 
 .slideshow__buttons {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 100%;
   z-index: 10;
   display: flex;
@@ -132,24 +131,6 @@ export default {
 
 .slideshow__image {
   height: 34rem;
+  margin-top: 5rem;
 }
-
-/*
-.works__background {
-  position: relative;
-  top: var(--sizing-mega);
-  margin-left: 25%;
-  width: 70%;
-  max-height: 35.5rem;
-}
-
-.works__grid {
-  background: palegoldenrod;
-}
-
-.works__image {
-  width: 40rem;
-  margin: var(--sizing-small) var(--sizing-medium);
-}
-*/
 </style>
