@@ -104,5 +104,9 @@ export default {
     font-size: var(--font-small-mobile);
     margin: var(--sizing-medium) var(--sizing-small);
   }
+
+  .menu__toggle a:nth-child(n + 2):hover {
+    margin-left: 0;
+  }
 }
 </style>

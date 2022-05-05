@@ -10,8 +10,10 @@
 	--sizing-bigger: 8rem;
 	--sizing-mega: 10.25rem;
 	--sizing-huge: 20rem;
-	--percent-small: 9%;
 
+	--percent-tiny: 17%;
+	--percent-small: 20%;
+	--percent-medium: 23%;
 
 	/*    FONT    */
 	--font-family: 'Inter Light BETA';

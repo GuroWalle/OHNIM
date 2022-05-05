@@ -57,9 +57,7 @@ export default {
   position: relative;
   top: var(--sizing-mega);
   margin-left: var(--percent-small);
-  width: 80%;
-  height: 35.5rem;
-  overflow: scroll;
+  width: 70%;
 }
 
 .biography__header {
@@ -75,7 +73,7 @@ export default {
 }
 
 .biography__description {
-  font-size: var(--font-medium-desktop);
+  font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
 }
 
@@ -84,11 +82,24 @@ export default {
   max-height: 30rem;
 }
 
+/* Styles Biography.vue, Contact.vue and Exhibitions.vue */
+.loading {
+  position: relative;
+  font-size: var(--font-small-desktop);
+  margin-left: 17.7%;
+  width: 87, 7%;
+  height: 100%;
+  padding: var(--sizing-mega);
+}
+
 @media screen and (max-width: 600px) {
   .biography__background {
-    top: var(--sizing-bigger);
-    left: var(--sizing-mega);
-    max-width: 55%;
+    top: var(--sizing-mega);
+    left: var(--sizing-medium);
+    margin-left: var(--percent-medium);
+    width: 65%;
+    height: 30rem;
+    overflow: scroll;
   }
 
   .biography__header {
@@ -109,24 +120,13 @@ export default {
     max-width: 14.4rem;
     max-height: 35rem;
   }
-}
 
-/* Styles Biography.vue, Contact.vue and Exhibitions.vue */
-.loading {
-  position: relative;
-  font-size: var(--font-small-desktop);
-  margin-left: 25%;
-  margin-left: 17.7%;
-  background: var(--white-transparent);
-  width: 87, 7%;
-  height: 100%;
-  padding: var(--sizing-mega);
-}
-
-.transparent__background {
-  margin-left: 17.7%;
-  background: var(--white-transparent);
-  width: 87, 7%;
-  height: 100%;
+  /* Styles Biography.vue, Contact.vue and Exhibitions.vue */
+  .loading {
+    position: relative;
+    font-size: var(--font-small-mobile);
+    margin-left: var(--percent-medium);
+    padding: var(--sizing-mega);
+  }
 }
 </style>

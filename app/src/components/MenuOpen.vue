@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <button @click="openMenu">
+    <button>
       <img
         class="menu__hamburger"
         v-if="hamburger_showing"
@@ -26,20 +26,19 @@ export default {
       hamburger_showing: false,
     };
   },
-  methods: {
-    openMenu() {
-      this.x_showing = false;
-      this.hamburger_showing = true;
-    },
-    closeMenu() {
-      this.x_showing = true;
-      this.hamburger_showing = false;
-    },
-  },
 };
 </script>
 
 <style scoped>
+.menu__toggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100rem;
+  height: 49.3rem;
+  background: var(--white-transparent);
+  padding-top: var(--sizing-medium);
+}
 .menu__toggle a:nth-child(1) {
   font-size: var(--font-big-desktop);
   margin: 0 var(--sizing-medium);
@@ -50,6 +49,16 @@ export default {
   .menu__toggle a:nth-child(1) {
     font-size: var(--font-big-mobile);
     margin: 0 0;
+  }
+
+  .menu__toggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--white-transparent);
+    padding-top: var(--sizing-medium);
   }
 }
 </style>

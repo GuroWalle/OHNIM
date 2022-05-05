@@ -1,10 +1,12 @@
 <template>
   <Logo />
   <RouterView />
+  <Footer />
 </template>
 
 <script>
 import Logo from "../components/Logo.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   data() {
@@ -12,6 +14,7 @@ export default {
   },
   components: {
     Logo,
+    Footer,
   },
 };
 </script>

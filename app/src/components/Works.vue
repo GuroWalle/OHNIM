@@ -107,9 +107,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 17.7%;
-  background: var(--white-transparent);
-  width: 87, 7%;
+  margin-left: var(--percent-tiny);
+  width: 80%;
   height: 100%;
 }
 
@@ -117,7 +116,6 @@ export default {
   position: absolute;
   width: 80%;
   height: 100%;
-  z-index: 10;
   display: flex;
   justify-content: space-between;
 }
@@ -131,6 +129,25 @@ export default {
 
 .slideshow__image {
   height: 34rem;
-  margin-top: 5rem;
+  margin-top: var(--sizing-big);
+}
+
+@media screen and (max-width: 600px) {
+  .works__slideshow {
+    margin-left: 25%;
+    height: 80%;
+  }
+
+  .slideshow__buttons {
+    top: 40%;
+  }
+
+  .slideshow__button {
+    padding: 0;
+  }
+
+  .slideshow__image {
+    height: 15rem;
+  }
 }
 </style>

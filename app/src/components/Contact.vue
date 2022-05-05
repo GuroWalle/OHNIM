@@ -61,7 +61,7 @@ export default {
   height: 35.5rem;
   overflow: scroll;
   margin-left: var(--percent-small);
-  width: 80%;
+  width: 70%;
 }
 
 .contact__title {
@@ -79,7 +79,9 @@ export default {
 @media screen and (max-width: 600px) {
   .contact__background {
     top: var(--sizing-mega);
-    left: 9.9rem;
+    left: var(--sizing-medium);
+    margin-left: var(--percent-medium);
+    max-width: 65%;
   }
 
   .contact__title {

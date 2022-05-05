@@ -4,8 +4,8 @@
     <div v-if="loading" class="loading">loading...</div>
     <div v-else>
       <div class="transparent__background">
-        <div class="haha">
-          <div class="exhibitions__background" v-for="exhibitions in result">
+        <div class="exhibition__scroll">
+          <div class="exhibitions__each-part" v-for="exhibitions in result">
             <div>
               <div class="exhibitions__title">{{ exhibitions.title }}</div>
               <div class="exhibitions__description">
@@ -53,17 +53,18 @@ export default {
   height: 100%;
 }
 
-.exhibitions__background {
+.exhibitions__each-part {
   position: relative;
-  top: var(--sizing-mega);
+  margin-top: var(--sizing-mega);
   height: 35.5rem;
-  margin-left: var(--percent-small);
-  width: 75%;
   margin-bottom: 35%;
+  margin-left: var(--percent-small);
+  width: 70%;
 }
 
-.haha {
-  max-height: 100%;
+.exhibition__scroll {
+  top: var(--sizing-mega);
+  height: 100%;
   overflow: scroll;
 }
 
@@ -80,23 +81,33 @@ export default {
 }
 
 .exhibitions__image {
-  max-width: 30rem;
+  width: 30rem;
 }
 
 @media screen and (max-width: 600px) {
-  .exhibitions__background {
+  .exhibitions__each-part {
     top: var(--sizing-mega);
-    left: var(--sizing-mega);
-    max-width: 55%;
+    left: var(--sizing-medium);
+    margin-left: var(--percent-medium);
+    width: 65%;
+  }
+
+  .exhibition__scroll {
+    height: 40rem;
+    overflow: scroll;
+    background: pink;
   }
 
   .exhibitions__title {
     font-size: var(--font-medium-mobile);
-    margin: 0 0 var(--sizing-medium) 0;
   }
 
   .exhibitions__description {
     font-size: var(--font-small-mobile);
+  }
+
+  .exhibitions__image {
+    width: 15rem;
   }
 }
 </style>
