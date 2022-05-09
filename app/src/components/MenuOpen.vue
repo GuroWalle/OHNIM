@@ -34,7 +34,7 @@ export default {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100rem;
+  width: 100%;
   height: 49.3rem;
   background: var(--white-transparent);
   padding-top: var(--sizing-medium);

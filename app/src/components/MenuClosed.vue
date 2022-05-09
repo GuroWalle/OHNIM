@@ -42,7 +42,7 @@ export default {
 <style>
 .menu {
   position: absolute;
-  width: 15.938rem;
+  width: 100%;
   height: 100%;
   margin-right: 10rem;
 }

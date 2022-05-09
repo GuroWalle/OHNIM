@@ -1,6 +1,7 @@
 <template>
   <div class="exhibitions">
     <MenuOpen />
+
     <div v-if="loading" class="loading">loading...</div>
     <div v-else>
       <div class="transparent__background">
@@ -55,15 +56,16 @@ export default {
 
 .exhibitions__each-part {
   position: relative;
-  margin-top: var(--sizing-mega);
   height: 35.5rem;
   margin-bottom: 35%;
-  margin-left: var(--percent-small);
+  margin-left: var(--sizing-bigger);
   width: 70%;
 }
 
 .exhibition__scroll {
-  top: var(--sizing-mega);
+  position: absolute;
+  top: var(--sizing-bigger);
+  left: var(--sizing-mega);
   height: 100%;
   overflow: scroll;
 }
@@ -82,20 +84,19 @@ export default {
 
 .exhibitions__image {
   width: 30rem;
+  margin-left: var(--sizing-bigger);
 }
 
 @media screen and (max-width: 600px) {
   .exhibitions__each-part {
-    top: var(--sizing-mega);
-    left: var(--sizing-medium);
-    margin-left: var(--percent-medium);
-    width: 65%;
+    margin-left: 0;
+    width: 90%;
+    margin-bottom: 45%;
   }
 
   .exhibition__scroll {
     height: 40rem;
-    overflow: scroll;
-    background: pink;
+    left: var(--sizing-bigger);
   }
 
   .exhibitions__title {

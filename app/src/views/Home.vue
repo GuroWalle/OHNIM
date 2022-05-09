@@ -4,12 +4,17 @@
       <MenuClosed />
       <Arrow />
     </div>
+    <div>
+      <ScrollAnimation />
+    </div>
   </div>
 </template>
 
 <script>
 import MenuClosed from "../components/MenuClosed.vue";
 import Arrow from "../components/Arrow.vue";
+import ScrollAnimation from "../components/ScrollAnimation.vue";
+
 export default {
   data() {
     return {};
@@ -17,6 +22,7 @@ export default {
   components: {
     MenuClosed,
     Arrow,
+    ScrollAnimation,
   },
 };
 </script>
@@ -26,6 +32,7 @@ export default {
   background-image: url("/assets/images/background_ny.jpg");
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 /*   mobile   */

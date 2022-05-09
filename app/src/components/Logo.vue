@@ -1,5 +1,7 @@
 <template>
-  <div class="logo">MINO / OHNIM</div>
+  <RouterLink to="/">
+    <div class="logo">MINO / OHNIM</div>
+  </RouterLink>
 </template>
 
 <style>

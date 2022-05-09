@@ -10,27 +10,17 @@
   top: 41.5rem;
   right: 10rem;
   color: white;
-  animation: mover 1s infinite alternate;
+  animation: arrow 1s infinite alternate;
 }
 
 .arrow__animation {
-  -webkit-animation: mover 1s infinite alternate;
-  animation: mover 1s infinite alternate;
+  animation: arrow 1s infinite alternate;
 }
 .arrow__animation {
-  -webkit-animation: mover 1s infinite alternate;
-  animation: mover 1s infinite alternate;
+  animation: arrow 1s infinite alternate;
 }
 
-@-webkit-keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-@keyframes mover {
+@keyframes arrow {
   0% {
     transform: translateY(0);
   }
@@ -44,7 +34,7 @@
     position: absolute;
     top: 38rem;
     right: 3.5rem;
-    animation: mover 1s infinite alternate;
+    animation: arrow 1s infinite alternate;
   }
 }
 </style>
