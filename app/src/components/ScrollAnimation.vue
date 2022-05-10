@@ -1,35 +1,23 @@
 <template>
-  <div class="scroll">
-    <div class="scroll_lol">
-      <div class="scroll__images">
-        <img class="image__1" src="/assets/images/to.jpg" alt="" />
-        <img class="image__2" src="/assets/images/tre.jpg" alt="" />
-        <img class="image__3" src="/assets/images/fem.jpg" alt="" />
-        <img class="image__4" src="/assets/images/en.jpg" alt="" />
-        <img class="image__5" src="/assets/images/fire.jpg" alt="" />
-      </div>
-    </div>
-
-    <div class="scroll__quote" v-for="quote in result">
-      <h1>{{ quote.quote }}</h1>
-      <h2>- {{ quote.author }}</h2>
-      <img class="quote__sunflower" src="/assets/images/sunflower.svg" alt="" />
+  <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container-general">
+            <div class="gallery-wrap">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </template>
 
 <script>
-import query from "../groq/quotes.groq?raw";
-import viewMixin from "../mixins/viewMixins";
-
 export default {
-  mixins: [viewMixin],
-
-  async created() {
-    await this.sanityFetch(query, {
-      documentType: "project",
-    });
-  },
   data() {
     return {};
   },
@@ -37,77 +25,64 @@ export default {
 </script>
 
 <style>
-.scroll {
+.swiper-container {
   width: 100%;
-  margin-top: var(--sizing-big);
+  height: 90%;
 }
 
-.scroll__images {
+.swiper-slide {
+  text-align: center;
+  background: rgb(78, 78, 125);
+  /* Center slide text vertically */
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  gap: 4rem;
-  height: 100%;
-  overflow-x: scroll;
-  padding: 3rem;
-  background: rgb(119, 115, 137);
-}
-
-.image__1 {
-  object-fit: contain;
-}
-
-.image__2 {
-  object-fit: contain;
-}
-
-.image__3 {
-  object-fit: contain;
-}
-
-.image__4 {
-  object-fit: contain;
-}
-
-.image__5 {
-  object-fit: contain;
-}
-
-.scroll__quote {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
 
-.scroll__quote h1 {
-  width: 50%;
-  font-size: var(--font-medium-desktop);
-  letter-spacing: var(--letter-spazing-small);
+/* Image Accordions General */
+.container-general {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 1000px;
 }
 
-.scroll__quote h2 {
-  font-size: var(--font-medium-desktop);
-  letter-spacing: var(--letter-spazing-small);
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 85vh;
 }
 
-.quote__sunflower {
-  width: 10rem;
-
-  animation-name: flower;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: all 0.8s ease;
+}
+      
+.item:hover {
+  flex: 7;
+}
+    
+.item:first-of-type {
+  background-image: url("/assets/images/to.jpg");
 }
 
-@keyframes flower {
-  from {
-    transform: translate(1000px);
-  }
+.item:nth-of-type(2) {
+  background-image: url("/assets/images/fire.jpg");
+}
 
-  to {
-    transform: translate(0px);
-  }
+.item:nth-of-type(3) {
+  background-image: url("/assets/images/tre.jpg");
+}
+
+.item:nth-of-type(4) {
+  background-image: url("/assets/images/fem.jpg");
+}
+
+.item:last-of-type {
+  background-image: url("/assets/images/en.jpg");
 }
 </style>

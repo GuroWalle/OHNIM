@@ -36,7 +36,8 @@ export default {
   position: relative;
   width: 100%;
   height: 49.3rem;
-  background: var(--white-transparent);
+  background: var(--black-transparent);
+;
   padding-top: var(--sizing-medium);
 }
 .menu__toggle a:nth-child(1) {

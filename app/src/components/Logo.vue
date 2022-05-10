@@ -12,6 +12,7 @@
   color: white;
   font-size: var(--font-big-desktop);
   letter-spacing: var(--letter-spazing-medium);
+  z-index: 1;
 }
 
 /*   mobile   */

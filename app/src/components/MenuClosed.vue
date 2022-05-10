@@ -58,7 +58,7 @@ export default {
   position: relative;
   width: 15.938rem;
   height: 49.3rem;
-  background: var(--white-transparent);
+  background: var(--black-transparent);
   padding-top: var(--sizing-medium);
 }
 
@@ -69,7 +69,7 @@ export default {
 .menu__toggle a {
   font-size: var(--font-small-desktop);
   margin: var(--sizing-medium);
-  color: black;
+  color: white;
   letter-spacing: var(--letter-spazing-small);
   text-decoration: none;
 }

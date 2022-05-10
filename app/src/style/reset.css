@@ -2,9 +2,12 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	color: white;
 }
 
-button, input, table {
+button,
+input,
+table {
 	font: inherit;
 	background: transparent;
 	border: none;

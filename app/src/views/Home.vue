@@ -6,6 +6,7 @@
     </div>
     <div>
       <ScrollAnimation />
+      <Quote />
     </div>
   </div>
 </template>
@@ -14,6 +15,7 @@
 import MenuClosed from "../components/MenuClosed.vue";
 import Arrow from "../components/Arrow.vue";
 import ScrollAnimation from "../components/ScrollAnimation.vue";
+import Quote from "../components/Quote.vue";
 
 export default {
   data() {
@@ -23,6 +25,7 @@ export default {
     MenuClosed,
     Arrow,
     ScrollAnimation,
+    Quote,
   },
 };
 </script>

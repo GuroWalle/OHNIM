@@ -123,7 +123,7 @@ export default {
 .slideshow__button {
   padding: 0.5em;
   text-transform: uppercase;
-  color: black;
+  color: white;
   font-size: var(--font-big-desktop);
 }
 
