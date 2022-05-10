@@ -5,7 +5,7 @@
       <Arrow />
     </div>
     <div>
-      <ScrollAnimation />
+      <GalleryAnimation />
       <Quote />
     </div>
   </div>
@@ -14,17 +14,14 @@
 <script>
 import MenuClosed from "../components/MenuClosed.vue";
 import Arrow from "../components/Arrow.vue";
-import ScrollAnimation from "../components/ScrollAnimation.vue";
+import GalleryAnimation from "../components/GalleryAnimation.vue";
 import Quote from "../components/Quote.vue";
 
 export default {
-  data() {
-    return {};
-  },
   components: {
     MenuClosed,
     Arrow,
-    ScrollAnimation,
+    GalleryAnimation,
     Quote,
   },
 };
@@ -32,7 +29,7 @@ export default {
 
 <style>
 .main-page__background {
-  background-image: url("/assets/images/background_ny.jpg");
+  background-image: url("/assets/images/collage.jpeg");
   width: 100%;
   height: 100%;
   object-fit: contain;

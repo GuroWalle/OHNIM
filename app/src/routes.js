@@ -1,8 +1,8 @@
 import Home from './views/Home.vue';
-import Biography from './components/Biography.vue';
-import Contact from './components/Contact.vue';
-import Exhibitions from './components/Exhibitions.vue';
-import Works from './components/Works.vue';
+import Biography from './views/Biography.vue';
+import Contact from './views/Contact.vue';
+import Exhibitions from './views/Exhibitions.vue';
+import Works from './views/Works.vue';
 
 export default [
 	{ name: 'home', path: '/', component: Home },

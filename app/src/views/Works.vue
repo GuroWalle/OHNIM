@@ -98,7 +98,7 @@ export default {
 
 <style>
 .works {
-  background-image: url("/assets/images/background_desktop.jpg");
+  background-image: url("/assets/images/collage.jpeg");
   height: 100%;
 }
 

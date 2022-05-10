@@ -50,13 +50,12 @@ export default {
 
 <style>
 .exhibitions {
-  background-image: url("/assets/images/background_desktop.jpg");
+  background-image: url("/assets/images/collage.jpeg");
   height: 100%;
 }
 
 .exhibitions__each-part {
   position: relative;
-  height: 35.5rem;
   margin-bottom: 35%;
   margin-left: var(--sizing-bigger);
   width: 70%;
@@ -67,6 +66,7 @@ export default {
   top: var(--sizing-bigger);
   left: var(--sizing-mega);
   height: 100%;
+  height: 40rem;
   overflow: scroll;
 }
 

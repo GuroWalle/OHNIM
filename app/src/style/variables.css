@@ -3,6 +3,8 @@
 	--foreground: black;
 	--white-transparent: rgba(255, 255, 255, 0.600);
 	--black-transparent: rgba(0, 0, 0, 0.550);
+	--blue-background: rgb(78, 78, 125);
+
 
 	/*  Sizing  */
 	--sizing-small: 1.281rem;
@@ -16,7 +18,8 @@
 	--percent-small: 20%;
 	--percent-medium: 23%;
 
-	/*    FONT    */
+
+	/*    TYPOGRAFY    */
 	--font-family: 'Inter Light BETA';
 
 	/*  Desktop  */
