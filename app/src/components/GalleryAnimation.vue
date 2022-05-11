@@ -1,6 +1,7 @@
 <template>
   <div class="gallery">
     <h1 class="gallery__title">Featured Works</h1>
+    <p class="gallery__description">- Hover over / click the images -</p>
       <div class="gallery__background">
           <div class="background__container">
             <div class="container__wrap">
@@ -34,6 +35,14 @@ export default {
   padding: var(--sizing-medium) 0 0 0;
   text-align: center;
   font-size: var(--font-medium-desktop);
+  letter-spacing: var(--letter-spazing-small);
+}
+
+.gallery__description {
+  background: var(--blue-background);
+  padding: var(--sizing-small) 0 0 0;
+  text-align: center;
+  font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
 }
 
@@ -88,5 +97,16 @@ export default {
 
 .wrap__image:last-of-type {
   background-image: url("/assets/images/en.jpg");
+}
+
+@media screen and (max-width: 600px) {
+  .gallery__title {
+    padding: var(--sizing-medium) 0 0 0;
+    font-size: var(--font-medium-mobile);
+  }
+
+  .gallery__description {
+    font-size: var(--font-small-mobile);
+  }
 }
 </style>

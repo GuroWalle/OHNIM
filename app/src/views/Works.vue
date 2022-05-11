@@ -1,7 +1,7 @@
 <template>
   <div class="works">
     <MenuOpen />
-
+    <Logo />
     <div class="works__slideshow">
       <div class="slideshow__buttons">
         <button @click="previousImage" class="slideshow__button">&lt;</button>
@@ -19,6 +19,7 @@
 import query from "../groq/works.groq?raw";
 import viewMixin from "../mixins/viewMixins.js";
 import MenuOpen from "../components/MenuOpen.vue";
+import Logo from "../components/Logo.vue";
 
 export default {
   mixins: [viewMixin],
@@ -76,6 +77,7 @@ export default {
 
   components: {
     MenuOpen,
+    Logo,
   },
 
   computed: {
@@ -98,8 +100,10 @@ export default {
 
 <style>
 .works {
-  background-image: url("/assets/images/collage.jpeg");
+  background-image: url("/assets/images/collage_ha.jpg");
+  width: 92%;
   height: 100%;
+  object-fit: contain;
 }
 
 .works__slideshow {
@@ -133,6 +137,11 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
+  .works {
+    background-image: url("/assets/images/collage_hoho.jpg");
+    width: 100%;
+  }
+
   .works__slideshow {
     margin-left: 25%;
     height: 80%;

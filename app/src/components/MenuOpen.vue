@@ -58,7 +58,7 @@ export default {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: var(--white-transparent);
+  background: var(--black-transparent);
     padding-top: var(--sizing-medium);
   }
 }

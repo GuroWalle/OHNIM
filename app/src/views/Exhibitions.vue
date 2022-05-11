@@ -1,7 +1,7 @@
 <template>
   <div class="exhibitions">
     <MenuOpen />
-
+    <Logo />
     <div v-if="loading" class="loading">loading...</div>
     <div v-else>
       <div class="transparent__background">
@@ -29,6 +29,7 @@
 import query from "../groq/exhibitions.groq?raw";
 import viewMixin from "../mixins/viewMixins";
 import MenuOpen from "../components/MenuOpen.vue";
+import Logo from "../components/Logo.vue";
 
 export default {
   mixins: [viewMixin],
@@ -44,14 +45,17 @@ export default {
 
   components: {
     MenuOpen,
+    Logo,
   },
 };
 </script>
 
 <style>
 .exhibitions {
-  background-image: url("/assets/images/collage.jpeg");
+  background-image: url("/assets/images/collage_ha.jpg");
+  width: 92%;
   height: 100%;
+  object-fit: contain;
 }
 
 .exhibitions__each-part {
@@ -63,7 +67,7 @@ export default {
 
 .exhibition__scroll {
   position: absolute;
-  top: var(--sizing-bigger);
+  top: var(--sizing-mega);
   left: var(--sizing-mega);
   height: 100%;
   height: 40rem;
@@ -88,6 +92,11 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
+  .exhibitions {
+    background-image: url("/assets/images/collage_hoho.jpg");
+    width: 100%;
+  }
+
   .exhibitions__each-part {
     margin-left: 0;
     width: 90%;
@@ -109,6 +118,7 @@ export default {
 
   .exhibitions__image {
     width: 15rem;
+    margin-left: 0;
   }
 }
 </style>

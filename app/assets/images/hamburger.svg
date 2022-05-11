@@ -1,5 +1,5 @@
 <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="20" height="2" fill="magenta"/>
-<rect x="0.5" y="7.5" width="19" height="1" fill="magenta" stroke="magenta"/>
-<rect y="15" width="20" height="2" fill="magenta"/>
+<rect width="20" height="2" fill="DodgerBlue"/>
+<rect x="0.5" y="7.5" width="19" height="1" fill="DodgerBlue" stroke="DodgerBlue"/>
+<rect y="15" width="20" height="2" fill="DodgerBlue"/>
 </svg>

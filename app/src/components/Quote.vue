@@ -32,7 +32,6 @@ export default {
   margin-top: var(--sizing-big);
 }
 
-
 .quote__data {
   height: 100%;
   display: flex;
@@ -71,5 +70,27 @@ export default {
   to {
     transform: translate(0px);
   }
+}
+
+@media screen and (max-width: 600px) {
+.quote {
+  width: 100%;
+  margin-top: var(--sizing-big);
+}
+
+.quote__data h1 {
+  width: 90%;
+  font-size: var(--font-medium-mobile);
+  margin-left: 1.5rem;
+}
+
+.quote__data h2 {
+  font-size: var(--font-medium-mobile);
+  margin-left: 10rem;
+}
+
+.quote__sunflower {
+  width: 5rem;
+}
 }
 </style>

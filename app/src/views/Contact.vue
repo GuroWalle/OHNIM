@@ -1,6 +1,7 @@
 <template>
   <div class="contact">
     <MenuOpen />
+    <Logo/>
     <div v-if="loading" class="loading">loading...</div>
     <div v-else>
       <div class="transparent__background">
@@ -29,6 +30,7 @@
 import query from "../groq/contact.groq?raw";
 import viewMixin from "../mixins/viewMixins.js";
 import MenuOpen from "../components/MenuOpen.vue";
+import Logo from "../components/Logo.vue";
 
 export default {
   mixins: [viewMixin],
@@ -45,14 +47,17 @@ export default {
 
   components: {
     MenuOpen,
+    Logo,
   },
 };
 </script>
 
 <style>
 .contact {
-  background-image: url("/assets/images/collage.jpeg");
+  background-image: url("/assets/images/collage_ha.jpg");
+  width: 92%;
   height: 100%;
+  object-fit: contain;
 }
 
 .contact__background {
@@ -77,6 +82,11 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
+  .contact {
+    background-image: url("/assets/images/collage_hoho.jpg");
+    width: 100%;
+  }
+
   .contact__background {
     top: var(--sizing-mega);
     left: var(--sizing-medium);
