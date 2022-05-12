@@ -4,7 +4,7 @@
       <img
         class="menu__hamburger"
         v-if="hamburger_showing"
-        src="/assets/images/hamburger.svg"
+        src="/images/hamburger.svg"
         alt=""
       />
     </button>

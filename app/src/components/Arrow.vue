@@ -1,6 +1,6 @@
 <template>
   <div class="arrow__animation">
-    <img src="/assets/images/arrow.svg" alt="" />
+    <img src="/images/arrow.svg" alt="" />
   </div>
 
 </template>

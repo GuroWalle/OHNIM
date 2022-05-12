@@ -85,23 +85,23 @@ export default {
 }
     
 .wrap__image:first-of-type {
-  background-image: url("/assets/images/to.jpg");
+  background-image: url("/images/to.jpg");
 }
 
 .wrap__image:nth-of-type(2) {
-  background-image: url("/assets/images/fire.jpg");
+  background-image: url("/images/fire.jpg");
 }
 
 .wrap__image:nth-of-type(3) {
-  background-image: url("/assets/images/tre.jpg");
+  background-image: url("/images/tre.jpg");
 }
 
 .wrap__image:nth-of-type(4) {
-  background-image: url("/assets/images/fem.jpg");
+  background-image: url("/images/fem.jpg");
 }
 
 .wrap__image:last-of-type {
-  background-image: url("/assets/images/en.jpg");
+  background-image: url("/images/en.jpg");
 }
 
 @media screen and (max-width: 600px) {

@@ -49,7 +49,7 @@ export default {
 
 <style>
 .biography {
-  background-image: url("/assets/images/collage_desktop.jpg");
+  background-image: url("/images/collage_desktop.jpg");
   width: 92%;
   height: 100%;
   object-fit: contain;
@@ -96,7 +96,7 @@ export default {
 
 @media screen and (max-width: 600px) {
   .biography {
-    background-image: url("/assets/images/collage_mobile.jpg");
+    background-image: url("/images/collage_mobile.jpg");
     width: 100%;
   }
 

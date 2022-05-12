@@ -97,7 +97,7 @@ export default {
 
 <style>
 .works {
-  background-image: url("/assets/images/collage_desktop.jpg");
+  background-image: url("/images/collage_desktop.jpg");
   width: 92%;
   height: 100%;
   object-fit: contain;
@@ -129,13 +129,13 @@ export default {
 }
 
 .slideshow__image {
-  height: 34rem;
+  height: 39rem;
   margin-top: var(--sizing-big);
 }
 
 @media screen and (max-width: 600px) {
   .works {
-    background-image: url("/assets/images/collage_mobile.jpg");
+    background-image: url("/images/collage_mobile.jpg");
     width: 100%;
   }
 

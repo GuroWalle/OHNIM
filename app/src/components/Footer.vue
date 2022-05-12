@@ -1,5 +1,5 @@
 <template>
-  <img class="footer__sunflower" src="/assets/images/sunflower.svg" alt="" />
+  <img class="footer__sunflower" src="/images/sunflower.svg" alt="" />
   <footer>MINO / OHNIM</footer>
 </template>
 
