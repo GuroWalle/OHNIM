@@ -35,39 +35,39 @@ export default {
       slides: [
         {
           title: "One",
-          file: "/assets/images/en.jpg",
+          file: "/images/en.jpg",
         },
         {
           title: "Two",
-          file: "/assets/images/to.jpg",
+          file: "/images/to.jpg",
         },
         {
           title: "three",
-          file: "/assets/images/tre.jpg",
+          file: "/images/tre.jpg",
         },
         {
           title: "four",
-          file: "/assets/images/fire.jpg",
+          file: "/images/fire.jpg",
         },
         {
           title: "five",
-          file: "/assets/images/fem.jpg",
+          file: "/images/fem.jpg",
         },
         {
           title: "six",
-          file: "/assets/images/seks.jpg",
+          file: "/images/seks.jpg",
         },
         {
           title: "seven",
-          file: "/assets/images/syv.jpg",
+          file: "/images/syv.jpg",
         },
         {
           title: "eight",
-          file: "/assets/images/åtte.jpg",
+          file: "/images/åtte.jpg",
         },
         {
           title: "nine",
-          file: "/assets/images/ni.jpg",
+          file: "/images/ni.jpg",
         },
       ],
     };
