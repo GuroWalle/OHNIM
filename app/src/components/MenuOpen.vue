@@ -1,13 +1,5 @@
 <template>
   <div class="menu">
-    <button>
-      <img
-        class="menu__hamburger"
-        v-if="hamburger_showing"
-        src="/assets/images/hamburger.svg"
-        alt=""
-      />
-    </button>
     <div v-if="x_showing" class="menu__toggle">
       <RouterLink to="/">X</RouterLink>
       <RouterLink to="/works">Works</RouterLink>
@@ -23,7 +15,6 @@ export default {
   data() {
     return {
       x_showing: true,
-      hamburger_showing: false,
     };
   },
 };
@@ -37,7 +28,6 @@ export default {
   width: 100%;
   height: 49.3rem;
   background: var(--black-transparent);
-;
   padding-top: var(--sizing-medium);
 }
 .menu__toggle a:nth-child(1) {
@@ -58,7 +48,7 @@ export default {
     position: relative;
     width: 100vw;
     height: 100vh;
-  background: var(--black-transparent);
+    background: var(--black-transparent);
     padding-top: var(--sizing-medium);
   }
 }

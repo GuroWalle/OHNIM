@@ -3,7 +3,6 @@
        <div class="quote__data" v-for="quote in result">
           <h1>{{ quote.quote }}</h1>
           <h2>- {{ quote.author }}</h2>
-          <img class="quote__sunflower" src="/assets/images/sunflower.svg" alt="" />
        </div>
     </div>
 </template>
@@ -29,7 +28,7 @@ export default {
 <style>
 .quote {
   width: 100%;
-  margin-top: var(--sizing-big);
+  margin-top: var(--sizing-medium);
 }
 
 .quote__data {
@@ -45,52 +44,30 @@ export default {
   width: 50%;
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
-    color: black;
+  color: black;
 }
 
 .quote__data h2 {
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
-    color: black;
-}
-
-.quote__sunflower {
-  width: 10rem;
-
-  animation-name: flower;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes flower {
-  from {
-    transform: translate(1000px);
-  }
-
-  to {
-    transform: translate(0px);
-  }
+  color: black;
 }
 
 @media screen and (max-width: 600px) {
-.quote {
-  width: 100%;
-  margin-top: var(--sizing-big);
-}
+  .quote {
+    width: 100%;
+    margin-top: var(--sizing-big);
+  }
 
-.quote__data h1 {
-  width: 90%;
-  font-size: var(--font-medium-mobile);
-  margin-left: 1.5rem;
-}
+  .quote__data h1 {
+    width: 90%;
+    font-size: var(--font-medium-mobile);
+    margin-left: 1.5rem;
+  }
 
-.quote__data h2 {
-  font-size: var(--font-medium-mobile);
-  margin-left: 10rem;
-}
-
-.quote__sunflower {
-  width: 5rem;
-}
+  .quote__data h2 {
+    font-size: var(--font-medium-mobile);
+    margin-left: 10rem;
+  }
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
   <div class="biography">
     <MenuOpen />
-    <Logo />
     <div v-if="loading" class="loading">loading...</div>
     <div v-else>
       <div class="transparent__background">
@@ -28,7 +27,6 @@
 import query from "../groq/biography.groq?raw";
 import viewMixin from "../mixins/viewMixins.js";
 import MenuOpen from "../components/MenuOpen.vue";
-import Logo from "../components/Logo.vue";
 
 export default {
   mixins: [viewMixin],
@@ -45,18 +43,13 @@ export default {
 
   components: {
     MenuOpen,
-    Logo,
   },
-
-  props: {
-    color: String,
-  }
 };
 </script>
 
 <style>
 .biography {
-  background-image: url("/assets/images/collage_ha.jpg");
+  background-image: url("/assets/images/collage_desktop.jpg");
   width: 92%;
   height: 100%;
   object-fit: contain;
@@ -103,7 +96,7 @@ export default {
 
 @media screen and (max-width: 600px) {
   .biography {
-    background-image: url("/assets/images/collage_hoho.jpg");
+    background-image: url("/assets/images/collage_mobile.jpg");
     width: 100%;
   }
 

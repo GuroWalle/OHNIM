@@ -1,8 +1,7 @@
 <template>
   <div class="main-page">
-    <div class="main-page__background">
+    <div class="main-page__background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
       <MenuClosed />
-      <Logo />
       <Arrow />
     </div>
     <div>
@@ -14,7 +13,6 @@
 
 <script>
 import MenuClosed from "../components/MenuClosed.vue";
-import Logo from "../components/Logo.vue";
 import Arrow from "../components/Arrow.vue";
 import GalleryAnimation from "../components/GalleryAnimation.vue";
 import Quote from "../components/Quote.vue";
@@ -22,7 +20,6 @@ import Quote from "../components/Quote.vue";
 export default {
   components: {
     MenuClosed,
-    Logo,
     Arrow,
     GalleryAnimation,
     Quote,
@@ -33,7 +30,7 @@ export default {
 <style>
 
 .main-page__background {
-  background-image: url("/assets/images/collage_ha.jpg");
+  background-image: url("/assets/images/collage_desktop.jpg");
   width: 92%;
   height: 100%;
   object-fit: contain;
@@ -42,7 +39,7 @@ export default {
 /*   mobile   */
 @media screen and (max-width: 600px) {
   .main-page__background {
-  background-image: url("/assets/images/collage_hoho.jpg");
+  background-image: url("/assets/images/collage_mobile.jpg");
   width: 100%;
 }
 }

@@ -1,6 +1,6 @@
 <template>
   <RouterLink to="/">
-    <div class="logo">MINO / OHNIM</div>
+    <div aria-label="Logo takes you back to the main page." class="logo">MINO / OHNIM</div>
   </RouterLink>
 </template>
 

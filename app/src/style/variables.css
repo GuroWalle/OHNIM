@@ -1,11 +1,7 @@
 :root {
 	--background: white;
-	--foreground: black;
-	--white-transparent: rgba(255, 255, 255, 0.600);
 	--black-transparent: rgba(0, 0, 0, 0.600);
-	--blue-background: rgb(78, 78, 125);
-	--dodgers-blue: #1E90FF;
-
+	--blue-background: #4e4e7d;
 
 	/*  Sizing  */
 	--sizing-small: 1.281rem;

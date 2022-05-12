@@ -33,7 +33,7 @@
 @media screen and (max-width: 600px) {
   .arrow__animation {
     position: absolute;
-    top: 38.5rem;
+    top: 35rem;
     right: 3.5rem;
     animation: arrow 1s infinite alternate;
   }
