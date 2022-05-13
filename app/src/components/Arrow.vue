@@ -10,7 +10,6 @@
   position: absolute;
   top: 42.5rem;
   right: 5rem;
-  color: white;
   animation: arrow 1s infinite alternate;
 }
 

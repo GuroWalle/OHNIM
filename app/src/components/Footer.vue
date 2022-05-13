@@ -6,7 +6,6 @@
 <style>
 .footer__sunflower {
   width: 10rem;
-  margin-top: var(--sizing-bigger);
   margin-left: var(--sizing-huge);
 }
 

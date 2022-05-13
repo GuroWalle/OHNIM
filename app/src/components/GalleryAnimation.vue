@@ -17,14 +17,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {};
-  },
-};
-</script>
-
 <style>
 .gallery {
   width: 100%;
