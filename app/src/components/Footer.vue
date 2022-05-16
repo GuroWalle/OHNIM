@@ -7,6 +7,8 @@
 .footer__sunflower {
   width: 10rem;
   margin-left: var(--sizing-huge);
+  margin-top: var(--sizing-mega);
+
 }
 
 footer {
@@ -20,8 +22,7 @@ footer {
 @media screen and (max-width: 600px) {
   .footer__sunflower {
     width: 6.5rem;
-    margin-top: 0;
-    margin-left: var(--sizing-mega);
+    margin-left: var(--sizing-bigger);
   }
 
   footer {

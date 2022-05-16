@@ -101,7 +101,7 @@ export default {
   }
 
   .exhibition__scroll {
-    height: 40rem;
+    height: 30rem;
     left: var(--sizing-bigger);
   }
 

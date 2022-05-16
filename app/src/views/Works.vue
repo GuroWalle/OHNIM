@@ -153,7 +153,7 @@ export default {
   }
 
   .slideshow__image {
-    height: 15rem;
+    height: 16rem;
   }
 }
 </style>
