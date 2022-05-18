@@ -4,3 +4,8 @@
 	font-weight: normal;
 	src: local('Inter Light BETA'), url('./font/Inter-Light-BETA.woff') format('woff');
 }
+
+@font-face {
+	font-family: 'Handwritten Font';
+	src: url('./font/BhFont-Regular.ttf');
+}

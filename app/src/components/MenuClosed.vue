@@ -11,8 +11,8 @@
     <div v-if="x_showing" class="menu__toggle">
       <button class="toggle_x" @click="closeMenu">X</button>
       <RouterLink to="/works">Works</RouterLink>
-      <RouterLink to="/biography">Biography</RouterLink>
       <RouterLink to="/exhibitions">Exhibitions</RouterLink>
+      <RouterLink to="/biography">Biography</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </div>
   </div>
@@ -57,7 +57,7 @@ export default {
   flex-direction: column;
   position: relative;
   width: 15.938rem;
-  height: 49.3rem;
+  height: 100%;
   background: var(--black-transparent);
   padding-top: var(--sizing-medium);
 }
@@ -76,15 +76,11 @@ export default {
 
 .menu__toggle a:nth-child(n + 2):hover {
   margin-left: var(--sizing-big);
+  text-decoration: underline;  
 }
 
 /*   mobile   */
 @media screen and (max-width: 600px) {
-  .menu {
-    width: 9rem;
-    height: 43.78rem;
-  }
-
   .menu__hamburger {
     width: 2rem;
     margin: 3rem 3.5rem;
@@ -92,11 +88,10 @@ export default {
 
   .menu__toggle {
     width: 9rem;
-    height: 43.78rem;
   }
 
   .toggle_x {
-    margin: 0 4rem;
+    margin: 0 3rem;
     font-size: var(--font-big-mobile);
   }
 
@@ -106,7 +101,9 @@ export default {
   }
 
   .menu__toggle a:nth-child(n + 2):hover {
-    margin-left: 0;
+    margin: var(--sizing-medium) var(--sizing-small);
   }
+
 }
+
 </style>

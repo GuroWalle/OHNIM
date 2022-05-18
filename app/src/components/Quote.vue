@@ -38,19 +38,20 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  font-family: 'Handwritten Font';
 }
 
 .quote__data h1 {
   width: 50%;
-  font-size: var(--font-medium-desktop);
+  font-size: var(--font-big-desktop);
   letter-spacing: var(--letter-spazing-small);
-  color: black;
+  color: teal;
 }
 
 .quote__data h2 {
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
-  color: black;
+  color: teal;
 }
 
 @media screen and (max-width: 600px) {

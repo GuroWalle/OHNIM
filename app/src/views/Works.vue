@@ -9,6 +9,10 @@
 
       <figure>
         <img class="slideshow__image" :src="currentSlide.file" alt="" />
+        <figcaption class="slideshow__captions">
+          <p>{{currentSlide.name}}</p>
+          <p>{{currentSlide.caption}}</p>
+        </figcaption>
       </figure>
     </div>
   </div>
@@ -36,38 +40,56 @@ export default {
         {
           title: "One",
           file: "/images/en.jpg",
+          name: 'Name: " Crazy "',
+          caption: "From: SEEA 2019 exhibition"
         },
         {
           title: "Two",
           file: "/images/to.jpg",
+          name: 'Name: " MINO "',
+          caption: "From: SEEA 2019 exhibition"
         },
         {
           title: "three",
           file: "/images/tre.jpg",
+          name: 'Name: " Scared "',
+          caption: "From: SEEA 2019 exhibition"
         },
         {
           title: "four",
           file: "/images/fire.jpg",
+          name: 'Name: " Wake up call "',
+          caption: "From: Korean Eye 2020"
         },
         {
           title: "five",
           file: "/images/fem.jpg",
+          name: 'Name: " Happy but sad "',
+          caption: "From: Korean Eye 2020"
         },
         {
           title: "six",
           file: "/images/seks.jpg",
+          name: 'Name: " The standard "',
+          caption: "From: Korean Eye 2020"
         },
         {
           title: "seven",
           file: "/images/syv.jpg",
+          name: 'Name: " Hiding 2 "',
+          caption: "From: Korean Eye 2020"
         },
         {
           title: "eight",
           file: "/images/åtte.jpg",
+          name: 'Name: " Seulpeo / Sad "',
+          caption: "From: Korean Eye 2020"
         },
         {
           title: "nine",
           file: "/images/ni.jpg",
+          name: 'Name: " Haebalagi / Sunflower "',
+          caption: "From: Personal collection"
         },
       ],
     };
@@ -129,8 +151,13 @@ export default {
 }
 
 .slideshow__image {
-  height: 39rem;
+  max-height: 37rem;
   margin-top: var(--sizing-big);
+}
+
+.slideshow__captions {
+  font-size: var(--font-small-desktop);
+  margin-left: var(--sizing-small);
 }
 
 @media screen and (max-width: 600px) {
@@ -153,7 +180,13 @@ export default {
   }
 
   .slideshow__image {
-    height: 16rem;
+    max-height: 20rem; 
+    max-width: 15rem;
   }
+
+  .slideshow__captions {
+  font-size: var(--font-small-mobile);
+  margin-left: var(--sizing-small);
+}
 }
 </style>

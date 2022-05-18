@@ -6,11 +6,12 @@
       <div class="gallery__background">
           <div class="background__container">
             <div class="container__wrap" aria-label="An image collage with five featured works.">
-              <div class="wrap__image" aria-label="First artwork. This painting could be a self-portrait. The person has a red face. The face is being squished by a blue hand from the bottom of the face. The squishing has made the face move from being in the center of the frame to be moved up the canvas. Even though the person is being squished it still somehow looks comfortable with a smile. "></div>
-              <div class="wrap__image" aria-label="Second artwork. A person right face is painted, with its eye in especially in focus. The person has a blue and, and this hand is using the thumb- and index-finger to spread the eye wide open. Almost like a wakeup call."></div>
-              <div class="wrap__image" aria-label="Third artwork. In front of an orange background is half a yellow face (from top of the skull to right under the nose) located. Two blue hands is placed Munch's 'Scream' style to the face. The two eyes are located between the two hands pinky- and ring-finger. The person looks a little scared."></div>
-              <div class="wrap__image" aria-label="Fourth artwork. A person with a black robe is standing in front of a pink background. The background is also filled with four colorful balloons. The person is wearing a yellow half circle has a hat. The background is fun, but the person looks sad and grey. Maybe a depiction of life in the public eye?"></div>
-              <div class="wrap__image" aria-label="Fifth artwork. A yellow person with crazy purple hair is holding their hands up to their face, Munch's Scream style. The person looks like a crazy scientist."></div>
+              <!-- tabIndex: makes sure the hover effect works on mobile too (not by hover but click) -->
+              <div tabIndex="0" class="wrap__image" aria-label="First artwork. This painting could be a self-portrait. The person has a red face. The face is being squished by a blue hand from the bottom of the face. The squishing has made the face move from being in the center of the frame to be moved up the canvas. Even though the person is being squished it still somehow looks comfortable with a smile. "></div>
+              <div tabIndex="0" class="wrap__image" aria-label="Second artwork. A person right face is painted, with its eye in especially in focus. The person has a blue and, and this hand is using the thumb- and index-finger to spread the eye wide open. Almost like a wakeup call."></div>
+              <div tabIndex="0" class="wrap__image" aria-label="Third artwork. In front of an orange background is half a yellow face (from top of the skull to right under the nose) located. Two blue hands is placed Munch's 'Scream' style to the face. The two eyes are located between the two hands pinky- and ring-finger. The person looks a little scared."></div>
+              <div tabIndex="0" class="wrap__image" aria-label="Fourth artwork. A person with a black robe is standing in front of a pink background. The background is also filled with four colorful balloons. The person is wearing a yellow half circle has a hat. The background is fun, but the person looks sad and grey. Maybe a depiction of life in the public eye?"></div>
+              <div tabIndex="0" class="wrap__image" aria-label="Fifth artwork. A yellow person with crazy purple hair is holding their hands up to their face, Munch's Scream style. The person looks like a crazy scientist."></div>
             </div>
           </div>
       </div>
@@ -72,7 +73,7 @@
   transition: all 0.5s ease;
 }
       
-.wrap__image:hover {
+.wrap__image:hover, .wrap__image:focus, .wrap__image:active {
   flex: 7;
 }
     
