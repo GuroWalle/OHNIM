@@ -62,7 +62,7 @@ export default {
   top: var(--sizing-mega);
   left: var(--sizing-mega);
   height: 100%;
-  height: 85%;
+  height: 79%;
   overflow: scroll;
 }
 
