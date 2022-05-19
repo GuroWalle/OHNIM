@@ -4,7 +4,7 @@ export default {
    type: 'document',
    fields: [
       {
-         title: 'Nr. of painting',
+         title: 'Title',
          name: 'paintingNumber',
          type: 'string',
          validation: Rule => Rule.required()

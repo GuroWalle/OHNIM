@@ -10,8 +10,8 @@
       <figure>
         <img class="slideshow__image" :src="currentSlide.file" alt="" />
         <figcaption class="slideshow__captions">
-          <p>{{currentSlide.name}}</p>
-          <p>{{currentSlide.caption}}</p>
+          <p> Title: {{currentSlide.title}}</p>
+          <p> {{currentSlide.extra}}</p>
         </figcaption>
       </figure>
     </div>
@@ -38,58 +38,43 @@ export default {
       showCaption: false,
       slides: [
         {
-          title: "One",
           file: "/images/en.jpg",
-          name: 'Name: " Crazy "',
-          caption: "From: SEEA 2019 exhibition"
+          title: " Unknown ",
         },
         {
-          title: "Two",
           file: "/images/to.jpg",
-          name: 'Name: " MINO "',
-          caption: "From: SEEA 2019 exhibition"
+          title: " Unknown ",
         },
         {
-          title: "three",
           file: "/images/tre.jpg",
-          name: 'Name: " Scared "',
-          caption: "From: SEEA 2019 exhibition"
+          title: " Unknown ",
         },
         {
-          title: "four",
-          file: "/images/fire.jpg",
-          name: 'Name: " Wake up call "',
-          caption: "From: Korean Eye 2020"
-        },
-        {
-          title: "five",
-          file: "/images/fem.jpg",
-          name: 'Name: " Happy but sad "',
-          caption: "From: Korean Eye 2020"
-        },
-        {
-          title: "six",
-          file: "/images/seks.jpg",
-          name: 'Name: " The standard "',
-          caption: "From: Korean Eye 2020"
-        },
-        {
-          title: "seven",
           file: "/images/syv.jpg",
-          name: 'Name: " Hiding 2 "',
-          caption: "From: Korean Eye 2020"
+          title: " ' Hiding 2 ', 2020 ",
+          extra: "Acrylic on canvas, 145.5 x 112cm"
         },
         {
-          title: "eight",
+          file: "/images/fire.jpg",
+          title: " ' Hiding 3 ', 2020 ",
+          extra: "Acrylic on canvas, 162 x 130.3cm"
+        },
+        {
+          file: "/images/fem.jpg",
+          title: " Unknown ",
+        },
+        {
+          file: "/images/seks.jpg",
+          title: " Unknown ",
+        },
+        {
           file: "/images/åtte.jpg",
-          name: 'Name: " Seulpeo / Sad "',
-          caption: "From: Korean Eye 2020"
+          title: "  ' Despair ', 2020 ",
+          extra: "Acrylic on canvas, 150 x 150cm"
         },
         {
-          title: "nine",
           file: "/images/ni.jpg",
-          name: 'Name: " Haebalagi / Sunflower "',
-          caption: "From: Personal collection"
+          title: " Unknown ",
         },
       ],
     };
@@ -156,9 +141,17 @@ export default {
 }
 
 .slideshow__captions {
-  font-size: var(--font-small-desktop);
-  margin-left: var(--sizing-small);
+  letter-spacing: var(--letter-spazing-small);
 }
+
+.slideshow__captions p:nth-child(1) {
+  font-size: var(--font-small-desktop);
+}
+
+.slideshow__captions p:nth-child(2) {
+  font-size: var(--font-tiny-desktop);
+}
+
 
 @media screen and (max-width: 600px) {
   .works {
@@ -185,8 +178,16 @@ export default {
   }
 
   .slideshow__captions {
-  font-size: var(--font-small-mobile);
-  margin-left: var(--sizing-small);
+    letter-spacing: var(--letter-spazing-small);
+  }
+
+  .slideshow__captions p:nth-child(1) {
+    font-size: var(--font-small-mobile);
+  }
+
+  .slideshow__captions p:nth-child(2) {
+  font-size: var(--font-tiny-mobile);
 }
+
 }
 </style>

@@ -28,11 +28,12 @@ export default {
 <style>
 .quote {
   width: 100%;
-  margin-top: var(--sizing-medium);
+  margin-top: var(--sizing-bigger);
 }
 
 .quote__data {
-  height: 100%;
+  padding-top: var(--sizing-bigger);
+  height: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,13 +58,12 @@ export default {
 @media screen and (max-width: 600px) {
   .quote {
     width: 100%;
-    margin-top: var(--sizing-big);
+    margin-top: var(--sizing-mega);
   }
 
   .quote__data h1 {
-    width: 90%;
-    font-size: var(--font-medium-mobile);
-    margin-left: 1.5rem;
+    width: 80%;
+    font-size: var(--font-big-mobile);
   }
 
   .quote__data h2 {
