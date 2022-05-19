@@ -1,19 +1,21 @@
 <template>
   <div class="works">
-    <MenuOpen />
-    <div class="works__slideshow">
-      <div class="slideshow__buttons">
-        <button @click="previousImage" class="slideshow__button">&lt;</button>
-        <button @click="nextImage" class="slideshow__button">&gt;</button>
-      </div>
+      <div class="background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
+      <MenuOpen />
+      <div class="works__slideshow">
+        <div class="slideshow__buttons">
+          <button @click="previousImage" class="slideshow__button">&lt;</button>
+          <button @click="nextImage" class="slideshow__button">&gt;</button>
+        </div>
 
-      <figure>
-        <img class="slideshow__image" :src="currentSlide.file" alt="" />
-        <figcaption class="slideshow__captions">
-          <p> Title: {{currentSlide.title}}</p>
-          <p> {{currentSlide.extra}}</p>
-        </figcaption>
-      </figure>
+        <figure>
+          <img class="slideshow__image" :src="currentSlide.file" alt="" />
+          <figcaption class="slideshow__captions">
+            <p> Title: {{currentSlide.title}}</p>
+            <p> {{currentSlide.extra}}</p>
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </template>
@@ -103,13 +105,6 @@ export default {
 </script>
 
 <style>
-.works {
-  background-image: url("/images/collage_desktop.jpg");
-  width: 92%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .works__slideshow {
   position: relative;
   display: flex;
@@ -154,11 +149,6 @@ export default {
 
 
 @media screen and (max-width: 600px) {
-  .works {
-    background-image: url("/images/collage_mobile.jpg");
-    width: 100%;
-  }
-
   .works__slideshow {
     margin-left: 25%;
     height: 80%;

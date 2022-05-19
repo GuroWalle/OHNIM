@@ -1,21 +1,28 @@
 <template>
   <div class="biography">
-    <MenuOpen />
-    <div v-if="loading" class="loading">loading...</div>
-    <div v-else>
-      <div class="transparent__background">
-        <div class="biography__background" v-for="biography in result">
-          <h1 class="biography__header">{{ biography.title }}</h1>
+    <div class="background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
+      <MenuOpen />
+      <div v-if="loading" class="loading">loading...</div>
+      <div v-else>
+        <div class="transparent__background">
+          <div class="biography__background" v-for="biography in result">
+            <h1 class="biography__header">{{ biography.title }}</h1>
 
-          <div class="biography__flex">
-            <div class="biography__description">
-              {{ biography.description }}
+            <div class="biography__flex">
+              <div class="biography__description">
+                <div>
+                  {{ biography.description }}
+                </div>
+                <div>
+                  {{ biography.quote }}
+                </div>
+              </div>
+              <img
+                class="biography__image"
+                :src="biography.image.asset.url"
+                :alt="biography.caption"
+              />
             </div>
-            <img
-              class="biography__image"
-              :src="biography.image.asset.url"
-              :alt="biography.caption"
-            />
           </div>
         </div>
       </div>
@@ -48,18 +55,12 @@ export default {
 </script>
 
 <style>
-.biography {
-  background-image: url("/images/collage_desktop.jpg");
-  width: 92%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .biography__background {
   position: relative;
   top: var(--sizing-mega);
   margin-left: var(--percent-small);
-  width: 80%;
+  width: 90%;
+  height: 75%;
 }
 
 .biography__header {
@@ -71,17 +72,22 @@ export default {
 .biography__flex {
   display: flex;
   flex-direction: row;
-  gap: var(--sizing-small);
+  gap: var(--sizing-medium);
 }
 
 .biography__description {
   font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
+  width: 50%;
+}
+
+.biography__description div:nth-child(2) {
+  margin: var(--sizing-small) 0;
 }
 
 .biography__image {
-  max-width: 20rem;
-  max-height: 30rem;
+  max-width: 22rem;
+  max-height: 25rem;
 }
 
 /* Styles Biography.vue, Contact.vue and Exhibitions.vue */
@@ -95,11 +101,6 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-  .biography {
-    background-image: url("/images/collage_mobile.jpg");
-    width: 100%;
-  }
-
   .biography__background {
     top: var(--sizing-mega);
     left: var(--sizing-medium);
@@ -121,6 +122,7 @@ export default {
   .biography__description {
     font-size: var(--font-small-mobile);
     letter-spacing: var(--letter-spazing-small);
+    width: 85%;
   }
 
   .biography__image {

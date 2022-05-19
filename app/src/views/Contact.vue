@@ -1,24 +1,26 @@
 <template>
   <div class="contact">
-    <MenuOpen />
-    <div v-if="loading" class="loading">loading...</div>
-    <div v-else>
-      <div class="transparent__background">
-        <div class="contact__background" v-for="contact in result">
-          <h1 class="contact__title">{{ contact.title }}</h1>
-          <div class="contact__text">
-            <p>{{ contact.number }}</p>
-            <p>{{ contact.email }}</p>
-            <p>{{ contact.address }}</p>
-          </div>
+    <div class="background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
+      <MenuOpen />
+      <div v-if="loading" class="loading">loading...</div>
+      <div v-else>
+        <div class="transparent__background">
+          <div class="contact__background" v-for="contact in result">
+            <h1 class="contact__title">{{ contact.title }}</h1>
+            <div class="contact__text">
+              <p>{{ contact.number }}</p>
+              <p>{{ contact.email }}</p>
+              <p>{{ contact.address }}</p>
+            </div>
 
-          <h2 class="contact__title">{{ contact.name }}</h2>
-          <a
-            class="contact__text"
-            href="https://www.instagram.com/realllllmino/"
-            target="_blank"
-            >@realllllmino</a
-          >
+            <h2 class="contact__title">{{ contact.name }}</h2>
+            <a
+              class="contact__text"
+              href="https://www.instagram.com/realllllmino/"
+              target="_blank"
+              >@realllllmino</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -50,13 +52,6 @@ export default {
 </script>
 
 <style>
-.contact {
-  background-image: url("/images/collage_desktop.jpg");
-  width: 92%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .contact__background {
   position: relative;
   top: var(--sizing-mega);
@@ -79,11 +74,6 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-  .contact {
-    background-image: url("/images/collage_mobile.jpg");
-    width: 100%;
-  }
-
   .contact__background {
     top: var(--sizing-mega);
     left: var(--sizing-medium);

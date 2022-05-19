@@ -16,6 +16,12 @@ export default {
          validation: Rule => Rule.required(),
       },
       {
+         title: 'Quote',
+         name: 'quote',
+         type: 'text',
+         validation: Rule => Rule.required(),
+      },
+      {
          title: 'Image',
          name: 'image',
          type: 'image',

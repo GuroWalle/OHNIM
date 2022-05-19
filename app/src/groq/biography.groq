@@ -2,6 +2,7 @@
   _id,
   title,
   description,
+  quote,
   caption,
   image {
      asset->{url}

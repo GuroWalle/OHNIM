@@ -1,21 +1,23 @@
 <template>
   <div class="exhibitions">
-    <MenuOpen />
-    <div v-if="loading" class="loading">loading...</div>
-    <div v-else>
-      <div class="transparent__background">
-        <div class="exhibition__scroll">
-          <div class="exhibitions__each-part" v-for="exhibitions in result">
-            <div>
-              <div class="exhibitions__title">{{ exhibitions.title }}</div>
-              <div class="exhibitions__description">
-                {{ exhibitions.description }}
+      <div class="background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
+      <MenuOpen />
+      <div v-if="loading" class="loading">loading...</div>
+      <div v-else>
+        <div class="transparent__background">
+          <div class="exhibition__scroll">
+            <div class="exhibitions__each-part" v-for="exhibitions in result">
+              <div>
+                <div class="exhibitions__title">{{ exhibitions.title }}</div>
+                <div class="exhibitions__description">
+                  {{ exhibitions.description }}
+                </div>
+                <img
+                  class="exhibitions__image"
+                  :src="exhibitions.image.asset.url"
+                  :alt="exhibitions.caption"
+                />
               </div>
-              <img
-                class="exhibitions__image"
-                :src="exhibitions.image.asset.url"
-                :alt="exhibitions.caption"
-              />
             </div>
           </div>
         </div>
@@ -48,13 +50,6 @@ export default {
 </script>
 
 <style>
-.exhibitions {
-  background-image: url("/images/collage_desktop.jpg");
-  width: 92%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .exhibitions__each-part {
   position: relative;
   margin-bottom: 5rem;
@@ -67,7 +62,7 @@ export default {
   top: var(--sizing-mega);
   left: var(--sizing-mega);
   height: 100%;
-  height: 40rem;
+  height: 85%;
   overflow: scroll;
 }
 
@@ -89,11 +84,6 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-  .exhibitions {
-    background-image: url("/images/collage_mobile.jpg");
-    width: 100%;
-  }
-
   .exhibitions__each-part {
     margin-left: 0;
     width: 90%;

@@ -1,14 +1,20 @@
 <template>
-  <img class="footer__sunflower" src="/images/sunflower.svg" alt="" />
-  <footer>MINO / OHNIM</footer>
+  <div class="footer__background">
+    <img class="footer__sunflower" src="/images/sunflower.svg" alt="" />
+    <footer>MINO / OHNIM</footer>
+  </div>
 </template>
 
 <style>
+.footer__background {
+  width: 100%;
+  background: white;
+}
+
 .footer__sunflower {
   width: 10rem;
   margin-left: var(--sizing-huge);
   margin-top: var(--sizing-mega);
-
 }
 
 footer {
