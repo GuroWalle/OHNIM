@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Inter Light BETA';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Inter Light BETA'), url('/fonts/Inter-Light-BETA.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Handwritten Font';
+	src: url('/fonts/BhFont-Regular.ttf');
+}

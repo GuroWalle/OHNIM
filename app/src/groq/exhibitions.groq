@@ -1,9 +1,0 @@
-*[_type == 'exhibitions'] | order(year asc) {
-  _id,
-  title,
-  description,
-  caption,
-    image {
-     asset->{url}
-   },
-}

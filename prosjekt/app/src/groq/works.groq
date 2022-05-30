@@ -1,0 +1,10 @@
+*[_type == 'paintings'] {
+     _id,
+    title,
+    size,
+    year,
+    caption,
+    painting {
+     asset->{url}
+   },  
+}

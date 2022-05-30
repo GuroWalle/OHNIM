@@ -1,9 +1,0 @@
-*[_type == 'contact'] {
-  _id,
-  email,
-  link,
-  name,
-  number,
-  address,
-  title
-}

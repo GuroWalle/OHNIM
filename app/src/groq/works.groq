@@ -1,7 +1,0 @@
-*[_type == 'paintings'] | order(_createdAt asc) {
-    _id,
-    caption,
-    painting {
-     asset->{url}
-   },
-}

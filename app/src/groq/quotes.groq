@@ -1,4 +1,0 @@
-*[_type == 'quotes'] {
-    quote,
-    author
-}
