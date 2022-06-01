@@ -57,10 +57,10 @@ export default {
 <style>
 .biography__background {
   position: relative;
-  top: var(--sizing-mega);
-  margin-left: var(--percent-small);
-  width: 90%;
+  top: var(--sizing-bigger);
+  width: 75%;
   height: 75%;
+  margin-left: var(--percent-small);
 }
 
 .biography__header {
@@ -72,13 +72,14 @@ export default {
 .biography__flex {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   gap: var(--sizing-medium);
 }
 
 .biography__description {
+  width: 55%;
   font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
-  width: 50%;
 }
 
 .biography__description div:nth-child(2) {
@@ -93,21 +94,21 @@ export default {
 /* Styles Biography.vue, Contact.vue and Exhibitions.vue */
 .loading {
   position: relative;
-  font-size: var(--font-small-desktop);
-  margin-left: 17.7%;
-  width: 87, 7%;
+  width: 87,7%;
   height: 100%;
   padding: var(--sizing-mega);
+  margin-left: 17.7%;
+  font-size: var(--font-small-desktop);
 }
 
 @media screen and (max-width: 600px) {
   .biography__background {
     top: var(--sizing-mega);
     left: var(--sizing-medium);
-    margin-left: var(--percent-medium);
     width: 65%;
     height: 30rem;
     overflow: scroll;
+    margin-left: var(--percent-medium);
   }
 
   .biography__header {
@@ -120,9 +121,9 @@ export default {
   }
 
   .biography__description {
+    width: 85%;
     font-size: var(--font-small-mobile);
     letter-spacing: var(--letter-spazing-small);
-    width: 85%;
   }
 
   .biography__image {
@@ -134,8 +135,8 @@ export default {
   .loading {
     position: relative;
     font-size: var(--font-small-mobile);
-    margin-left: var(--percent-medium);
     padding: var(--sizing-mega);
+    margin-left: var(--percent-medium);
   }
 }
 </style>

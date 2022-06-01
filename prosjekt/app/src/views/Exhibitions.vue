@@ -1,6 +1,6 @@
 <template>
   <div class="exhibitions">
-      <div class="background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
+    <div class="background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
       <MenuOpen />
       <div v-if="loading" class="loading">loading...</div>
       <div v-else>
@@ -42,7 +42,6 @@ export default {
   data() {
     return {};
   },
-
   components: {
     MenuOpen,
   },
@@ -50,32 +49,32 @@ export default {
 </script>
 
 <style>
-.exhibitions__each-part {
-  position: relative;
-  margin-bottom: 5rem;
-  margin-left: var(--sizing-bigger);
-  width: 70%;
-}
-
 .exhibition__scroll {
   position: absolute;
-  top: var(--sizing-mega);
+  top: var(--sizing-bigger);
   left: var(--sizing-mega);
-  height: 100%;
+  width: 75%;
   height: 79%;
   overflow: scroll;
 }
 
+.exhibitions__each-part {
+  position: relative;
+  width: 70%;
+  margin-bottom: 5rem;
+  margin-left: var(--sizing-bigger);
+}
+
 .exhibitions__title {
+  margin: 0 0 var(--sizing-small) 0;
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
-  margin: 0 0 var(--sizing-small) 0;
 }
 
 .exhibitions__description {
+  margin: 0 0 var(--sizing-small) 0;
   font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
-  margin: 0 0 var(--sizing-small) 0;
 }
 
 .exhibitions__image {
@@ -84,15 +83,15 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-  .exhibitions__each-part {
-    margin-left: 0;
-    width: 90%;
-    margin-bottom: 3rem;
-  }
-
   .exhibition__scroll {
+    width: 65%;
     height: 30rem;
     left: var(--sizing-bigger);
+  }
+  
+  .exhibitions__each-part {
+    width: 100%;
+    margin: 0 0 3rem;
   }
 
   .exhibitions__title {

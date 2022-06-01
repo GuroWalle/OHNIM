@@ -8,7 +8,6 @@
         alt=""
       />
     </button>
-
     <div v-if="x_showing" class="menu__toggle">
       <button class="toggle_x" @click="closeMenu">X</button>
       <RouterLink to="/works">Works</RouterLink>
@@ -70,9 +69,9 @@ export default {
 .menu__toggle a {
   margin: var(--sizing-medium);
   font-size: var(--font-small-desktop);
-  color: white;
   letter-spacing: var(--letter-spazing-small);
   text-decoration: none;
+  color: white;
 }
 
 .menu__toggle a:nth-child(n + 2):hover {

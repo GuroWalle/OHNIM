@@ -29,7 +29,6 @@ export default {
 .quote {
   width: 100%;
   margin-top: var(--sizing-bigger);
-  background: white;
 }
 
 .quote__data {

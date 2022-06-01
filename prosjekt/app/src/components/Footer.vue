@@ -8,21 +8,21 @@
 <style>
 .footer__background {
   width: 100%;
-  background: white;
 }
 
 .footer__sunflower {
   width: 10rem;
-  margin-left: var(--sizing-huge);
   margin-top: var(--sizing-mega);
+  margin-left: var(--sizing-huge);
 }
 
 footer {
   width: 100%;
   height: 20rem;
   padding: 5rem;
-  background: seagreen;
   font-size: var(--font-big-desktop);
+  letter-spacing: var(--letter-spazing-medium);
+  background: seagreen;
 }
 
 @media screen and (max-width: 600px) {

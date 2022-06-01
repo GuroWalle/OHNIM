@@ -12,7 +12,6 @@
               <p>{{ contact.email }}</p>
               <p>{{ contact.address }}</p>
             </div>
-
             <h2 class="contact__title">{{ contact.name }}</h2>
             <a
               class="contact__text"
@@ -40,11 +39,9 @@ export default {
       documentType: "project",
     });
   },
-
   data() {
     return {};
   },
-
   components: {
     MenuOpen,
   },
@@ -54,43 +51,43 @@ export default {
 <style>
 .contact__background {
   position: relative;
-  top: var(--sizing-mega);
+  top: var(--sizing-bigger);
+  width: 70%;
   height: 35.5rem;
   overflow: scroll;
   margin-left: var(--percent-small);
-  width: 70%;
 }
 
 .contact__title {
+  margin: 0 0 var(--sizing-small) 0;
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
-  margin: 0 0 var(--sizing-small) 0;
 }
 
 .contact__text {
+  margin: 0 0 var(--sizing-big) 0;
   font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
-  margin: 0 0 var(--sizing-big) 0;
 }
 
 @media screen and (max-width: 600px) {
   .contact__background {
     top: var(--sizing-mega);
     left: var(--sizing-medium);
-    margin-left: var(--percent-medium);
     max-width: 65%;
+    margin-left: var(--percent-medium);
   }
 
   .contact__title {
+    margin: var(--sizing-small) 0;
     font-size: var(--font-medium-mobile);
     letter-spacing: var(--letter-spazing-small);
-    margin: var(--sizing-small) 0;
   }
 
   .contact__text {
+    margin: 0 0 var(--sizing-big) 0;
     font-size: var(--font-small-mobile);
     letter-spacing: var(--letter-spazing-small);
-    margin: 0 0 var(--sizing-big) 0;
   }
 }
 </style>

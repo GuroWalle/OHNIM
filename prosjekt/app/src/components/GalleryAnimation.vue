@@ -26,18 +26,18 @@
 
 .gallery__title {
   padding: var(--sizing-medium) 0 0 0;
-  background: var(--blue-background);
   text-align: center;
   font-size: var(--font-medium-desktop);
   letter-spacing: var(--letter-spazing-small);
+  background: var(--blue-background);
 }
 
 .gallery__description-desktop {
   padding: var(--sizing-small) 0 0 0;
-  background: var(--blue-background);
   text-align: center;
   font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
+  background: var(--blue-background);
 }
 
 .gallery__description-mobile {
@@ -106,10 +106,10 @@
   .gallery__description-mobile {
     display: block;
     padding: var(--sizing-small) 0 0 0;
-    background: var(--blue-background);
     text-align: center;
     font-size: var(--font-small-mobile);
     letter-spacing: var(--letter-spazing-small);
+    background: var(--blue-background);
   }
 
   .gallery__description-desktop {

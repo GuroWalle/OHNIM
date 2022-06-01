@@ -27,18 +27,16 @@ export default {
 <style>
 /* Styles Home.vue, Biography.vue, Contact.vue, Exhibitions.vue & Works.vue */
 .background {
-  background-image: url("/images/collage.jpeg");
   width: 100%;
   height: 100%;
+  background-image: url("/images/collage.jpeg");
   object-fit: contain;
 }
 
 @media screen and (max-width: 600px) {
   .background {
-  background-image: url("/images/collage_mobile.jpg");
-  width: 100%;
-}
-
-
+    width: 100%;
+    background-image: url("/images/collage_mobile.jpg");
+  }
 }
 </style>

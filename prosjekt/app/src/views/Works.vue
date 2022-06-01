@@ -1,20 +1,25 @@
 <template>
   <div class="works">
-      <div class="background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
+    <div class="background" aria-label="Background image contains two seperate artworks. The one on the left has a pink background. It includes dark clouds. On the clouds are some red people looking sad with their hand to their faces. The artwork on the right has a light blue background. This artwork also includes clouds. Here a pink person is lying on the cloud. It is really skinny and looks exhausted.">
       <MenuOpen />
-        <div class="works__slideshow">
-          <div class="slideshow__buttons">
-            <button @click="previousImage" class="slideshow__button">&lt;</button>
-            <button @click="nextImage" class="slideshow__button">&gt;</button>
+      <div v-if="loading" class="loading">loading...</div>
+      <div v-else>
+        <div class="transparent__background">
+          <div class="works__scroll">
+            <div class="works__each-part" v-for="works in result">
+              <div class="works__details">
+                <div class="works__title">Title: {{ works.title }}</div>
+                <img
+                  class="works__image"
+                  :src="works.painting.asset.url"
+                  :alt="works.caption"
+                />
+                <p>size: {{works.size}}</p>
+                <p>Year: {{works.year}}</p>
+              </div>
+            </div>
           </div>
-
-          <figure>
-            <img class="slideshow__image" :src="currentSlide.file" alt="" />
-            <figcaption class="slideshow__captions">
-              <p> Title: {{currentSlide.title}}</p>
-              <p> {{currentSlide.extra}}</p>
-            </figcaption>
-          </figure>
+        </div>
       </div>
     </div>
   </div>
@@ -22,7 +27,7 @@
 
 <script>
 import query from "../groq/works.groq?raw";
-import viewMixin from "../mixins/viewMixins.js";
+import viewMixin from "../mixins/viewMixins";
 import MenuOpen from "../components/MenuOpen.vue";
 
 export default {
@@ -33,149 +38,75 @@ export default {
       documentType: "project",
     });
   },
-
   data() {
-    return {
-      index: 0,
-      showCaption: false,
-      slides: [
-        {
-          file: "/images/en.jpg",
-          title: " Unknown ",
-        },
-        {
-          file: "/images/to.jpg",
-          title: " Unknown ",
-        },
-        {
-          file: "/images/tre.jpg",
-          title: " Unknown ",
-        },
-        {
-          file: "/images/syv.jpg",
-          title: " ' Hiding 2 ', 2020 ",
-          extra: "Acrylic on canvas, 145.5 x 112cm"
-        },
-        {
-          file: "/images/fire.jpg",
-          title: " ' Hiding 3 ', 2020 ",
-          extra: "Acrylic on canvas, 162 x 130.3cm"
-        },
-        {
-          file: "/images/fem.jpg",
-          title: " Unknown ",
-        },
-        {
-          file: "/images/seks.jpg",
-          title: " Unknown ",
-        },
-        {
-          file: "/images/åtte.jpg",
-          title: "  ' Despair ', 2020 ",
-          extra: "Acrylic on canvas, 150 x 150cm"
-        },
-        {
-          file: "/images/ni.jpg",
-          title: " Unknown ",
-        },
-      ],
-    };
+    return {};
   },
-
   components: {
     MenuOpen,
-  },
-
-  computed: {
-    currentSlide() {
-      return this.slides[this.index];
-    },
-  },
-
-  methods: {
-    previousImage() {
-      this.index = this.index === 0 ? this.slides.length - 1 : this.index - 1;
-    },
-
-    nextImage() {
-      this.index = this.index === this.slides.length - 1 ? 0 : this.index + 1;
-    },
   },
 };
 </script>
 
 <style>
-.works__slideshow {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: var(--percent-tiny);
-  width: 80%;
-  height: 100%;
-}
-
-.slideshow__buttons {
+.works__scroll {
   position: absolute;
+  top: var(--sizing-bigger);
+  left: var(--sizing-mega);
+  width: 70%;
+  height: 79%;
+  overflow: scroll;
+  margin-left: var(--sizing-mega);
+}
+
+.works__each-part {
   width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  margin-bottom: 5rem;
 }
 
-.slideshow__button {
-  padding: 0.5em;
-  text-transform: uppercase;
-  color: white;
-  font-size: var(--font-big-desktop);
-}
-
-.slideshow__image {
-  max-height: 37rem;
-  margin-top: var(--sizing-big);
-}
-
-.slideshow__captions {
+.works__details p {
+  margin: var(--sizing-small) var(--sizing-bigger);
+  font-size: var(--font-small-desktop);
   letter-spacing: var(--letter-spazing-small);
 }
 
-.slideshow__captions p:nth-child(1) {
-  font-size: var(--font-small-desktop);
+.works__title {
+  margin: 0 var(--sizing-big) var(--sizing-small);
+  font-size: var(--font-medium-desktop);
+  letter-spacing: var(--letter-spazing-small);
 }
 
-.slideshow__captions p:nth-child(2) {
-  font-size: var(--font-tiny-desktop);
+.works__image {
+  width: 30rem;
+  margin-left: var(--sizing-bigger);
 }
 
 @media screen and (max-width: 600px) {
-  .works__slideshow {
-    margin-left: 25%;
-    height: 80%;
+  .works__scroll {
+    width: 60%;
+    height: 30rem;
+    left: var(--sizing-small);
+    margin-left: var(--sizing-bigger);
   }
 
-  .slideshow__buttons {
-    top: 40%;
+  .works__each-part {
+    width: 100%;
+    margin: 0 0 2rem;
   }
 
-  .slideshow__button {
-    padding: 0;
+  .works__title {
+    margin: var(--sizing-small) 0;
+    font-size: var(--font-medium-mobile);
   }
 
-  .slideshow__image {
-    max-height: 20rem; 
-    max-width: 15rem;
-  }
-
-  .slideshow__captions {
-    letter-spacing: var(--letter-spazing-small);
-  }
-
-  .slideshow__captions p:nth-child(1) {
+  .works__details p {
+    margin: var(--sizing-small) 0;
     font-size: var(--font-small-mobile);
   }
 
-  .slideshow__captions p:nth-child(2) {
-  font-size: var(--font-tiny-mobile);
-}
+  .works__image {
+    width: 15rem;
+    margin-left: 0;
+  }
 }
 </style>
